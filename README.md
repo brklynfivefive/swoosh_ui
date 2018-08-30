@@ -29,4 +29,6 @@ This interface is compatible with Chrome or any latest Webkit-based browsers run
 
 ## COPYRIGHT
 
-This project contains some open-source libraries including the animation plugin "banana" originally developed by Seungyun Todd Oh in 2014.
+https://github.com/brklynfivefive/swoosh_ui/network/dependencies for all dependencies and third-party sources/libraries/tools used for this project. Some part of codes are from the dependencies/third-party libraries.
+
+Also contains some open-source libraries including the animation plugin "banana" originally developed by Seungyun Seungyun Todd Oh in 2014.
