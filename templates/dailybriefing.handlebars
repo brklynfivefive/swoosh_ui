@@ -1,0 +1,636 @@
+{{#if array}}
+{{#array}}
+<div class="swoosh-dailybriefingView" swoosh-object-id="{{objectid}}" swoosh-object-type="{{type}}" swoosh-object-peakscale="{{toJSON peakscale}}" banana-type="popover" banana-status="0" banana-option="base">
+    <div class="head-control" swoosh-current="scrolledno">
+        <div class="head-info">
+            <div class="head-action-close" banana-type="headControlButtons" banana-tap="1">
+                <div class="actionicon"><div class="obj"></div></div>
+            </div>
+
+            <div class="head-title" banana-status="1">
+                <p class="textSize3 textWeightMid dailybriefingTag">{{tag}}</p>
+                <p class="textSize1 textWeightReg2 dailybriefingTs" swoosh-data="{{ts}}"></p>
+            </div>
+        </div>
+
+        <div class="head-actions">
+            <div class="head-action-addtag" banana-tap="1">
+                <div class="actionicon">
+                    <div class="obj"></div>
+                    <p class="textSize4 textWeightMid">Add</p>
+                </div>
+            </div>
+            <div class="head-action-sectionfilter" banana-type="headControlButtons" banana-tap="1">
+                <div class="actionicon"><div class="obj"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="briefingContainer-tabs">
+        <ul>
+            <li class="briefing-tabitem" swoosh-object-id="1" swoosh-object-status="active">
+                <p class="textSize2 textWeightBold">Default</p>
+                <div class="tabitem-action-close">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+            </li>
+        </ul>
+        <div class="briefing-newtab" banana-tap="1">
+            <div class="actionicon"><div class="obj"></div></div>
+            <p class="textSize1 textWeightBold">COMPARE</p>
+        </div>
+    </div>
+
+    <div class="briefingContainer-view" banana-status="0" banana-option="base">
+        <div class="bfP-view" swoosh-object-id="1" banana-status="1">
+            <div class="bfP-storieslist" swoosh-current="">
+                {{#if focusstories}}
+                <div class="focusstories-group">
+                    {{#ifCond focusstoriesCount '==' '1'}}
+                        <p class="textSize4 textWeightBold highlightstoriesTitle">{{focusstoriesCount}} focus story</p>
+                    {{else}}
+                        <p class="textSize4 textWeightBold highlightstoriesTitle">{{focusstoriesCount}} focus stories</p>
+                    {{/ifCond}}
+                    <ul>
+                        {{#each focusstories}}
+                            {{#if url}}
+                            <div class="highlighted-story" swoosh-object-id="{{tweet_id}}" swoosh-current="" swoosh-object-type="briefingstory" swoosh-object-link="{{url}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-object-section="{{section}}" banana-status="1" swoosh-object-array='{{toJSON ../this}}'>
+                            {{else}}
+                            <div class="highlighted-story" swoosh-object-id="{{tweet_id}}" swoosh-current="" swoosh-object-type="briefingstory" swoosh-object-link="none" swoosh-object-sentiment="{{sentiment.score}}" swoosh-object-section="{{section}}" banana-status="1" swoosh-object-array='{{toJSON ../this}}'>
+                            {{/if}}
+                                {{#if original_image}}
+                                <div class="story-photo">
+                                    <div class="obj" style="background-image: url('{{original_image}}');"></div>
+                                </div>
+                                <div class="story-head" swoosh-object-type="photo">
+                                    {{#if descriptionfocus}}
+                                    <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                                    <p class="textSize2 textWeightReg2 storyHeadTitle storyHeadDesc" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+                                    {{else}}
+                                    <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                                    {{/if}}
+                                {{else}}
+                                {{#if photo}}
+                                <div class="story-photo">
+                                    <div class="obj" style="background-image: url('{{photo}}');"></div>
+                                </div>
+                                <div class="story-head" swoosh-object-type="photo">
+                                    {{#if descriptionfocus}}
+                                    <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                                    <p class="textSize2 textWeightReg2 storyHeadTitle storyHeadDesc" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+                                    {{else}}
+                                    <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                                    {{/if}}
+                                {{else}}
+                                <div class="story-head">
+                                    {{#if descriptionfocus}}
+                                    <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                                    <p class="textSize2 textWeightReg2 storyHeadTitle storyHeadDesc" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+                                    {{else}}
+                                    <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                                    {{/if}}
+                                {{/if}}
+                                {{/if}}
+                                    
+                                    <div class="story-source">
+                                        <p class="textSize1 textWeightMid">{{target}}, <span class="textWeightMid focusStoryTs" swoosh-data="{{ts}}"></span></p>
+                                    </div>
+                                    <div class="story-action-share">
+                                        <div class="actionicon"><div class="obj"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+
+                <div class="head-info-group">
+                    <div class="sentiment-group">
+                        <p class="textSize4 textWeightBold sentimentTitle">sentiment analysis</p>
+                        <div class="sentiment-data">
+                            <div class="highPosStat" swoosh-object-data="highpos">
+                                <p class="textSize6 textWeightMid highPosStatText">73 highly positive articles</p>
+                                <div class="stat-bar" swoosh-object-data="90"></div>
+                            </div>
+                            <div class="normalPosStat" swoosh-object-data="normalpos">
+                                <p class="textSize6 textWeightMid normalPosStatText">23 positive articles</p>
+                                <div class="stat-bar" swoosh-object-data="30"></div>
+                            </div>
+                            <div class="normalNegStat" swoosh-object-data="normalneg">
+                                <p class="textSize6 textWeightMid normalNegStatText">20 negative articles</p>
+                                <div class="stat-bar" swoosh-object-data="10"></div>
+                            </div>
+                            <div class="highNegStat" swoosh-object-data="highneg">
+                                <p class="textSize6 textWeightMid highNegStatText">23 quite negative articles</p>
+                                <div class="stat-bar" swoosh-object-data="20"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{#if headstories}}
+                    <div class="headstories-group">
+                        {{#ifCond headstoriesCount '==' '1'}}
+                            <p class="textSize4 textWeightBold headstoriesTitle">{{headstoriesCount}} head story</p>
+                        {{else}}
+                            <p class="textSize4 textWeightBold headstoriesTitle">{{headstoriesCount}} head stories</p>
+                        {{/ifCond}}
+                        {{#if keywords}}
+                        <div class="bfP-focuspoints" swoosh-current="">
+                            <ul>
+                                {{#each keywords}}
+                                <li banana-tap="1">
+                                    <span class="textSize3 textWeightMid tagContainer">{{this}}</span>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        {{/if}}
+                        <ul>
+                            {{#each headstories}}
+                            <li swoosh-data="">
+                                {{#if story.url}}
+                                <div class="story-head" banana-tap="1" swoosh-object-type="briefingstory" swoosh-object-section="{{story.section}}" swoosh-object-sentiment="{{story.sentiment.score}}" swoosh-object-id="{{story.tweet_id}}" swoosh-object-link="{{story.url}}" swoosh-object-array='{{toJSON this.story}}'>
+                                {{else}}
+                                <div class="story-head" swoosh-object-type="briefingstory" swoosh-object-section="{{story.section}}" swoosh-object-sentiment="{{story.sentiment.score}}" swoosh-object-id="{{story.tweet_id}}" swoosh-object-link="none" swoosh-object-array='{{toJSON this.story}}'>
+                                {{/if}}
+                                    <div class="storyContent">
+                                        <p class="textSize5 textWeightMid storyHeadTitle" swoosh-object-origin="{{story.target}}">{{story.titleonly}}</p>
+                                        <div class="story-source">
+                                            <p class="textSize0 textWeightMid">{{story.target}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="story-action-share">
+                                        <div class="actionicon"><div class="obj"></div></div>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                </div>
+
+                {{#if stories}}
+                <div class="allstories-group" swoosh-current="folded">
+                    <div class="stories-foldarea">
+                        {{#ifCond storiescount '==' '1'}}
+                            <p class="textSize4 textWeightBold allstoriesTitle">all {{storiescount}} story</p>
+                        {{else}}
+                            <p class="textSize4 textWeightBold allstoriesTitle">all {{storiescount}} stories</p>
+                        {{/ifCond}}
+                        <div class="stories-action-toggle">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        {{#each stories}}
+                        <li swoosh-object-count="{{storiescount}}" swoosh-data="">
+                            <div class="storyHeadGroup">
+                                <div class="story-time">
+                                    <p class="textSize1 textWeightBold">{{time}}</p>
+                                </div>
+                                
+                                <div class="story-action-toggle" banana-tap="1" swoosh-current="closed">
+                                    <div class="actionicon"><div class="obj"></div></div>
+                                </div>
+                                
+                                {{#if headstory}}
+                                {{#each headstory}}
+                                {{#if url}}
+                                <div class="story-head" banana-tap="1" swoosh-object-type="briefingstory" swoosh-object-section="{{section}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-object-id="{{tweet_id}}" swoosh-object-link="{{url}}" swoosh-object-array='{{toJSON ../this}}'>
+                                {{else}}
+                                <div class="story-head" swoosh-object-type="briefingstory" swoosh-object-section="{{section}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-object-id="{{tweet_id}}" swoosh-object-link="none" swoosh-object-array='{{toJSON ../this}}'>
+                                {{/if}}
+                                    <div class="storyContent">
+                                        {{#if descriptionfocus}}
+                                        <p class="textSize5 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                                        <p class="textSize2 textWeightReg2 storyHeadTitle storyHeadDesc" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+                                        {{else}}
+                                        <p class="textSize5 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                                        {{/if}}
+                                        <div class="story-source">
+                                            <p class="textSize0 textWeightMid">{{target}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="story-action-share">
+                                        <div class="actionicon"><div class="obj"></div></div>
+                                    </div>
+                                </div>
+                                {{/each}}
+                                {{/if}}
+                            </div>
+
+                            <div class="story-others" banana-status="0">
+                                {{#if storiesGroup}}
+                                {{#each storiesGroup}}
+                                {{#if url}}
+                                <div class="storyObj" banana-tap="1" swoosh-object="" swoosh-object-type="briefingstory" swoosh-object-section="{{section}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-content-type="{{mediatype}}" swoosh-object-id="{{tweet_id}}" swoosh-object-link="{{url}}" swoosh-object-array='{{toJSON ../this}}'>
+                                {{else}}
+                                <div class="storyObj" swoosh-object="" swoosh-object-type="briefingstory" swoosh-object-section="{{section}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-content-type="{{mediatype}}" swoosh-object-id="{{tweet_id}}" swoosh-object-link="none" swoosh-object-array='{{toJSON ../this}}'>
+                                {{/if}}
+                                    <div class="storyContent">
+                                        {{#if titleonly}}
+                                        <p class="textSize3 textWeightReg2 storyHeadTitle">{{titleonly}}</p>
+                                        {{else}}
+                                        <p class="textSize3 textWeightReg2 storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                                        {{/if}}
+                                        <div class="story-source">
+                                            <p class="textSize0 textWeightMid">{{target}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="story-action-share">
+                                        <div class="actionicon"><div class="obj"></div></div>
+                                    </div>
+                                </div>
+                                {{/each}}
+                                {{/if}}
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+    <div class="bfP-modebar">
+        <p class="textSize2 textWeightBold">End focus mode</p>
+    </div>
+
+    <div class="bfP-newBriefingSetRequestview" banana-status="0">
+        <div class="subview-bar">
+            <div class="subview-control">
+                <div class="subview-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="subview-action-confirm" banana-tap="1" banana-status="0" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">REQUEST</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subview-title">
+                <p class="textSize9 textWeightBold newBriefingSetRequestTitleStatus">Request a new</p>
+                <p class="textSize9 textWeightBold">custom briefing</p>
+            </div>
+        </div>
+
+        <div class="newBriefingSetRequest-viewArea">
+            <p class="textSize4 textWeightMid">Select sources you want to compare</p>
+
+            <div class="newBriefing-sourcepresetlist">
+                <p class="textSize4 textWeightBold">Your compare presets</p>
+                <div class="sourcepreset-group">
+                    <ul class="sourcepresets">
+                        
+                    </ul>
+                    <div class="newBriefingSetRequest-action-newpreset" banana-tap="1">
+                        <div class="actionicon"><div class="obj"></div></div>
+                        <p class="textSize4 textWeightMid">NEW</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newBriefing-sourceslist">
+                <p class="textSize4 textWeightBold">All sources</p>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">Fact-checkers</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="factcheckdotorg" banana-tap="1">
+                            <p class="textSize4 textWeightMid">FactCheck.org</p>
+                        </li>
+                        <li swoosh-object-data="PolitiFact" banana-tap="1">
+                            <p class="textSize4 textWeightMid">PolitiFact</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">U.S./World</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="NYT" banana-tap="1">
+                            <p class="textSize4 textWeightMid">New York Times</p>
+                        </li>
+                        <li swoosh-object-data="CNN" banana-tap="1">
+                            <p class="textSize4 textWeightMid">CNN</p>
+                        </li>
+                        <li swoosh-object-data="NBC" banana-tap="1">
+                            <p class="textSize4 textWeightMid">NBC/CNBC/MSNBC</p>
+                        </li>
+                        <li swoosh-object-data="politico" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Politico</p>
+                        </li>
+                        <li swoosh-object-data="LATimes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">LA Times</p>
+                        </li>
+                        <li swoosh-object-data="FiveThirtyEight" banana-tap="1">
+                            <p class="textSize4 textWeightMid">FiveThirtyEight</p>
+                        </li>
+                        <li swoosh-object-data="dailykos" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Daily Kos</p>
+                        </li>
+                        <li swoosh-object-data="Upworthy" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Upworthy</p>
+                        </li>
+                        <li swoosh-object-data="NewCo" banana-tap="1">
+                            <p class="textSize4 textWeightMid">NewCo</p>
+                        </li>
+                        <li swoosh-object-data="NewRepublic" banana-tap="1">
+                            <p class="textSize4 textWeightMid">New Republic</p>
+                        </li>
+                        <li swoosh-object-data="voxdotcom" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Vox</p>
+                        </li>
+                        <li swoosh-object-data="thinkprogress" banana-tap="1">
+                            <p class="textSize4 textWeightMid">ThinkProgress</p>
+                        </li>
+                        <li swoosh-object-data="OversightDems" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Oversight Democrats</p>
+                        </li>
+                        <li swoosh-object-data="ViceHuffBuzzFeed" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Vice News/Huffington Post/BuzzFeed</p>
+                        </li>
+                        <li swoosh-object-data="backchnnl" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Backchannel by WIRED</p>
+                        </li>
+                        <li swoosh-object-data="jacobinmag" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Jacobin Magazine</p>
+                        </li>
+                        <li swoosh-object-data="inthesetimesmag" banana-tap="1">
+                            <p class="textSize4 textWeightMid">In These Times</p>
+                        </li>
+                        <li swoosh-object-data="MotherJones" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Mother Jones</p>
+                        </li>
+                        <li swoosh-object-data="TheAdvocateMag" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Advocate Magazine</p>
+                        </li>
+                        <li swoosh-object-data="thedailybeast" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Daily Beast</p>
+                        </li>
+                        <li swoosh-object-data="FoxNews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Fox News</p>
+                        </li>
+                        <li swoosh-object-data="Bloomberg" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Bloomberg</p>
+                        </li>
+                        <li swoosh-object-data="WSJ" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Wall Street Journal</p>
+                        </li>
+                        <li swoosh-object-data="TheEconomist" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Economist</p>
+                        </li>
+                        <li swoosh-object-data="FT" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Financial Times</p>
+                        </li>
+                        <li swoosh-object-data="WashTimes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Washington Times</p>
+                        </li>
+                        <li swoosh-object-data="NRO" banana-tap="1">
+                            <p class="textSize4 textWeightMid">National Review</p>
+                        </li>
+                        <li swoosh-object-data="townhallcom" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Townhall</p>
+                        </li>
+                        <li swoosh-object-data="amspectator" banana-tap="1">
+                            <p class="textSize4 textWeightMid">American Spectator</p>
+                        </li>
+                        <li swoosh-object-data="DailyCaller" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Daily Caller</p>
+                        </li>
+                        <li swoosh-object-data="JudicialWatch" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Judicial Watch</p>
+                        </li>
+                        <li swoosh-object-data="AP" banana-tap="1">
+                            <p class="textSize4 textWeightMid">AP</p>
+                        </li>
+                        <li swoosh-object-data="NewsHour" banana-tap="1">
+                            <p class="textSize4 textWeightMid">PBS NewsHour</p>
+                        </li>
+                        <li swoosh-object-data="cspan" banana-tap="1">
+                            <p class="textSize4 textWeightMid">C-SPAN</p>
+                        </li>
+                        <li swoosh-object-data="Newsweek" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Newsweek</p>
+                        </li>
+                        <li swoosh-object-data="TheAtlantic" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Atlantic</p>
+                        </li>
+                        <li swoosh-object-data="BusinessInsider" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Business Insider</p>
+                        </li>
+                        <li swoosh-object-data="NPR" banana-tap="1">
+                            <p class="textSize4 textWeightMid">NPR</p>
+                        </li>
+                        <li swoosh-object-data="WP" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Washington Post</p>
+                        </li>
+                        <li swoosh-object-data="USATODAY" banana-tap="1">
+                            <p class="textSize4 textWeightMid">USA TODAY</p>
+                        </li>
+                        <li swoosh-object-data="Reuters" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Reuters</p>
+                        </li>
+                        <li swoosh-object-data="chicagotribune" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Chicago Tribune</p>
+                        </li>
+                        <li swoosh-object-data="ABCPolitics" banana-tap="1">
+                            <p class="textSize4 textWeightMid">ABC News Politics</p>
+                        </li>
+                        <li swoosh-object-data="BostonGlobe" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Boston Globe</p>
+                        </li>
+                        <li swoosh-object-data="BBCWorld" banana-tap="1">
+                            <p class="textSize4 textWeightMid">BBC World</p>
+                        </li>
+                        <li swoosh-object-data="AJENews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Al Jazeera World</p>
+                        </li>
+                        <li swoosh-object-data="Forbes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Forbes</p>
+                        </li>
+                        <li swoosh-object-data="HarvardBiz" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Harvard Business Review</p>
+                        </li>
+                        <li swoosh-object-data="NewYorker" banana-tap="1">
+                            <p class="textSize4 textWeightMid">New Yorker</p>
+                        </li>
+                        <li swoosh-object-data="thehill" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Hill</p>
+                        </li>
+                        <li swoosh-object-data="thenation" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Nation</p>
+                        </li>
+                        <li swoosh-object-data="TheStreet" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Street</p>
+                        </li>
+                        <li swoosh-object-data="TIME" banana-tap="1">
+                            <p class="textSize4 textWeightMid">TIME</p>
+                        </li>
+                        <li swoosh-object-data="VentureBeat" banana-tap="1">
+                            <p class="textSize4 textWeightMid">VentureBeat</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">World/Asia: China, Japan, Korea</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="YonhapNews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Yonhap News Agency (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="TheKoreaHerald" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Korea Herald (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="EnglishChosun" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Chosun Daily English (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="JoongAngDaily" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Joong-Ang Daily English (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="thekortimes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Korea Times (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="NHKWORLD_News" banana-tap="1">
+                            <p class="textSize4 textWeightMid">NHK World News (Japan)</p>
+                        </li>
+                        <li swoosh-object-data="The_Japan_News" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Japan News (The Yomiuri Shimbun, Japan)</p>
+                        </li>
+                        <li swoosh-object-data="JapanTimes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Japan Times (Japan)</p>
+                        </li>
+                        <li swoosh-object-data="AJWasahi" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Asia and Japan Watch (The Asahi Shimbun, Japan)</p>
+                        </li>
+                        <li swoosh-object-data="kyodo_english" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Kyodo Agency (Japan)</p>
+                        </li>
+                        <li swoosh-object-data="XHNews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Xinhua News Agency (China)</p>
+                        </li>
+                        <li swoosh-object-data="Echinanews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">China News Service (China)</p>
+                        </li>
+                        <li swoosh-object-data="ftchina" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Financial Times China (China)</p>
+                        </li>
+                        <li swoosh-object-data="ReutersChina" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Reuters China (China)</p>
+                        </li>
+                        <li swoosh-object-data="ChinaRealTime" banana-tap="1">
+                            <p class="textSize4 textWeightMid">WSJ China Real Time (China)</p>
+                        </li>
+                        <li swoosh-object-data="SCMP_News" banana-tap="1">
+                            <p class="textSize4 textWeightMid">South China Morning Post (China)</p>
+                        </li>
+                        <li swoosh-object-data="CDT" banana-tap="1">
+                            <p class="textSize4 textWeightMid">China Digital Times (China)</p>
+                        </li>
+                        <li swoosh-object-data="cctv_world" banana-tap="1">
+                            <p class="textSize4 textWeightMid">CCTV World (China)</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">World/Europe: UK</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="Telegraph" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Telegraph</p>
+                        </li>
+                        <li swoosh-object-data="MailOnline" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Mail Online</p>
+                        </li>
+                        <li swoosh-object-data="Independent" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Independent</p>
+                        </li>
+                        <li swoosh-object-data="SkyNews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Sky News</p>
+                        </li>
+                        <li swoosh-object-data="itvnews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">itv news</p>
+                        </li>
+                        <li swoosh-object-data="guardian" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Guardian</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">World/Europe: France</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="France24_en" banana-tap="1">
+                            <p class="textSize4 textWeightMid">France 24 English</p>
+                        </li>
+                        <li swoosh-object-data="AFP" banana-tap="1">
+                            <p class="textSize4 textWeightMid">AFP</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bfP-sectionFilterview" banana-status="0">
+        <div class="filter-viewArea">
+            <p class="textSize3 textWeightMid">Select sections you don't want to see</p>
+            <ul>
+                <li swoosh-object-data="usasociety" banana-tap="1">
+                    <p class="textSize4 textWeightMid">U.S.</p>
+                </li>
+                <li swoosh-object-data="usapolitics" banana-tap="1">
+                    <p class="textSize4 textWeightMid">Politics</p>
+                </li>
+                <li swoosh-object-data="western-en-world" banana-tap="1">
+                    <p class="textSize4 textWeightMid">World</p>
+                </li>
+                <li swoosh-object-data="usasports" banana-tap="1">
+                    <p class="textSize4 textWeightMid">Sports</p>
+                </li>
+                <li swoosh-object-data="usabusiness" banana-tap="1">
+                    <p class="textSize4 textWeightMid">Business</p>
+                </li>
+                <li swoosh-object-data="usafinance" banana-tap="1">
+                    <p class="textSize4 textWeightMid">Finance</p>
+                </li>
+                <li swoosh-object-data="usatechindustry" banana-tap="1">
+                    <p class="textSize4 textWeightMid">Tech</p>
+                </li>
+            </ul>
+            <div class="view-action-confirm">
+                <div class="actionicon">
+                    <div class="obj"></div>
+                    <p class="textSize4 textWeightMid">OKAY</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/array}}
+{{/if}}

@@ -1,0 +1,7 @@
+body[swoosh-device-type="android"] .createAccount-form.androidScroll{
+    margin-bottom: 120%;
+}
+
+body[swoosh-device-type="android"] .signinAccount-form.androidScroll{
+    margin-bottom: 120%;
+}

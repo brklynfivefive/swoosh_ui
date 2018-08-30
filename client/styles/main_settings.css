@@ -1,0 +1,224 @@
+.main-settings-view {
+    position: absolute;
+	height: 100%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	padding: 0 17px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+body[swoosh-screen-type="wide"] .main-settings-view{
+    padding: 0 10%;
+}
+
+.mainsettingsIcon{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-bottom: 6px;
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/settings.svg);
+    -webkit-mask-size: 23px 23px;
+}
+
+.main-settings-view .settings-notice{
+    padding-right: 25px;
+    color: #252525;
+    padding-top: 60px;
+    text-transform: uppercase;
+}
+
+.main-settings-view .subTitle{
+    color: #505050;
+    text-transform: uppercase;
+}
+
+.main-settings-view .settings-account{
+    padding-top: 25px;
+    color: #252525;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-settings-view .account-info-fields{
+    margin-top: 5px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #efefef;
+}
+
+.account-info-fields input{
+    background: transparent;
+	border: none;
+	resize: none;
+    width: 100%;
+	-webkit-font-smoothing: antialiased;
+	outline: none;
+    padding: 7px 0;
+    margin-bottom: 6px;
+    color: #252525;
+}
+
+.account-action-editConfirm{
+    display: flex;
+    padding: 10px 15px 10px 0;
+    align-items: center;
+    color: #252525;
+}
+
+.account-action-editConfirm .actionicon{
+    margin-right: 7px;
+}
+
+.account-action-editConfirm .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 20px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/confirm.svg);
+    -webkit-mask-size: 20px 17px;
+}
+
+.main-settings-view .settings-configs{
+    color: #252525;
+    margin-top: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #efefef;
+}
+
+.account-action-hourconfig{
+    display: flex;
+    padding: 10px 15px 10px 0;
+    align-items: center;
+    text-transform: uppercase;
+    color: #252525;
+    margin-top: 5px;
+    line-height: 20px;
+}
+
+.account-action-hourconfig .actionicon{
+    margin-right: 12px;
+}
+
+.account-action-hourconfig .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/time.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+.main-settings-view .account-action-prefconfig_socpol{
+    display: flex;
+    padding: 10px 15px 10px 0;
+    align-items: center;
+    text-transform: uppercase;
+    margin-top: 5px;
+    line-height: 20px;
+}
+
+.account-action-prefconfig_socpol .actionicon{
+    margin-right: 12px;
+}
+
+.account-action-prefconfig_socpol .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/briefingpref.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+.main-settings-view .settings-interaction{
+    color: #252525;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #efefef;
+}
+
+.main-settings-view .settings-others{
+    color: #252525;
+    margin-top: 20px;
+    padding-bottom: 70px;
+}
+
+.settings-others > div, .settings-interaction > div{
+    display: flex;
+    padding: 10px 15px 10px 0;
+    color: #252525;
+}
+
+.settings-interaction .settings-social{
+    display: flex;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.settings-interaction .account-action-promotion{
+    color: #689F38;
+}
+
+.account-action-fb, .account-action-instagram, .account-action-twitter{
+    display: flex;
+    padding: 10px 15px 10px 0;
+    margin-right: 10px;
+}
+
+.settings-social .actionicon{
+    margin-right: 12px;
+}
+
+.account-action-fb .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/fb.svg);
+    -webkit-mask-size: 25px 25px;
+}
+
+.account-action-instagram .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/instagram.svg);
+    -webkit-mask-size: 25px 25px;
+}
+
+.account-action-twitter .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/twitter.svg);
+    -webkit-mask-size: 25px 25px;
+}

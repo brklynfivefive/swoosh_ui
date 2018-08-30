@@ -1,0 +1,37 @@
+{{#array}}
+{{#if original_image}}
+<li banana-tap="1" swoosh-object-type="briefingstory" swoosh-object-id="{{tweet_id}}" swoosh-object-link="{{url}}" swoosh-object-data="photo">
+{{else}}
+{{#if photo}}
+<li banana-tap="1" swoosh-object-type="briefingstory" swoosh-object-id="{{tweet_id}}" swoosh-object-link="{{url}}" swoosh-object-data="photo">
+{{else}}
+<li banana-tap="1" swoosh-object-type="briefingstory" swoosh-object-id="{{tweet_id}}" swoosh-object-link="{{url}}">
+{{/if}}
+{{/if}}
+    <div class="storyContent">
+        {{#if titleonly}}
+        <p class="textSize3 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+        {{else}}
+        <p class="textSize3 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+        {{/if}}
+        <div class="story-source">
+            <p class="textSize0 textWeightMid">{{target}}</p>
+            <p class="textSize0 textWeightReg2 storyTs" swoosh-object-data="{{ts}}"></p>
+        </div>
+    </div>
+    {{#if original_image}}
+    <div class="storyPhoto">
+        <div class="obj" style="background-image: url('{{original_image}}');"></div>
+    </div>
+    {{else}}
+    {{#if photo}}
+    <div class="storyPhoto">
+        <div class="obj" style="background-image: url('{{photo}}');"></div>
+    </div>
+    {{/if}}
+    {{/if}}
+    <div class="story-action-share">
+        <div class="actionicon"><div class="obj"></div></div>
+    </div>
+</li>
+{{/array}}

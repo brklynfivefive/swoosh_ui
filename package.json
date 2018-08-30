@@ -1,0 +1,42 @@
+{
+  "name": "Swoosh",
+  "author": "Todd Oh, Toast Labs, LLC.",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify-shim": "^3.8.12",
+    "handlebars": "^4.0.0",
+    "jquery": "^2.2.3",
+    "jquery-easing": "0.0.1",
+    "jquery.scrollto": "^2.1.2",
+    "jsjws": "^2.1.0",
+    "jwt-decode": "^2.0.1",
+    "mixpanel": "^0.4.0",
+    "mixpanel-browser": "^2.7.2",
+    "moment": "^2.13.0",
+    "q": "^1.4.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jQuery.word-break-keep-all": "./client/libs/jquery.word-break-keep-all.min.js",
+    "jQuery.banana": "./client/libs/banana.js",
+    "jQuery.finger": "./client/libs/jquery.finger.js",
+    "jQuery.swooshhelpers": "./client/libs/swoosh_helpers.js"
+  },
+  "browserify-shim": {
+    "jQuery": "jquery:jQuery"
+  },
+  "dependencies": {
+    "chartist": "^0.10.1",
+    "d3": "^4.4.4",
+    "fuse.js": "^2.6.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "moment-timezone": "^0.5.11",
+    "pressure": "^2.0.3"
+  }
+}

@@ -1,0 +1,64 @@
+{{#if array}}
+{{#array}}
+{{#if storiescount}}
+<li swoosh-object-id="{{objectid}}" banana-tap="1">
+{{else}}
+<li swoosh-object-id="{{objectid}}" swoosh-object="nobriefing" banana-tap="1">
+{{/if}}
+    <div>
+        <div class="deskfocus-item">
+            <div class="item-head">
+                <p class="textSize4 textWeightMid deskfocusTag">{{tag}}</p>
+            </div>
+            <div class="deskfocus-story-preview">
+                {{#with focusstories.[0]}}
+                {{#if url}}
+                    {{#if original_image}}
+                    <div class="storyObj" swoosh-object-data="photo">
+                    {{else}}
+                    {{#if photo}}
+                        <div class="storyObj" swoosh-object-data="photo">
+                    {{else}}
+                        <div class="storyObj">
+                    {{/if}}
+                    {{/if}}
+                {{else}}
+                    {{#if original_image}}
+                    <div class="storyObj" swoosh-object-data="photo">
+                    {{else}}
+                    {{#if photo}}
+                        <div class="storyObj" swoosh-object-data="photo">
+                    {{else}}
+                        <div class="storyObj">
+                    {{/if}}
+                    {{/if}}
+                {{/if}}
+                    <div class="storyContent">
+                        <div class="contentContainer">
+                            {{#if titleonly}}
+                            <p class="textSize3 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                            {{else}}
+                            <p class="textSize3 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                            {{/if}}
+                            <p class="textSize0 textWeightReg2 storySource">{{target}}</p>
+                        </div>
+                    </div>
+                    {{#if original_image}}
+                    <div class="storyPhoto">
+                        <div class="obj" style="background-image: url('{{original_image}}');"></div>
+                    </div>
+                    {{else}}
+                    {{#if photo}}
+                    <div class="storyPhoto">
+                        <div class="obj" style="background-image: url('{{photo}}');"></div>
+                    </div>
+                    {{/if}}
+                    {{/if}}
+                </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+</li>
+{{/array}}
+{{/if}}

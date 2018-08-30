@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="4px" viewBox="0 0 20 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_options</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="24-px-Icons" transform="translate(-433.000000, -82.000000)" fill="#000000">
+            <g id="ic_options" transform="translate(443.000000, 84.000000) rotate(90.000000) translate(-443.000000, -84.000000) translate(441.000000, 74.000000)">
+                <g id="options">
+                    <circle id="Oval-7" cx="2" cy="2" r="2"></circle>
+                    <circle id="Oval-7-Copy" cx="2" cy="10" r="2"></circle>
+                    <circle id="Oval-7-Copy-2" cx="2" cy="18" r="2"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

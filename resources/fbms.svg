@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Messenger</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Black" transform="translate(-300.000000, -900.000000)" fill="#0B0B0A">
+            <g id="Line-8" transform="translate(205.000000, 899.000000)">
+                <path d="M119,1 C105.745143,1 95,10.9491852 95,23.2222222 C95,30.2155556 98.4899876,36.4534815 103.944099,40.526963 L103.944099,49 L112.115876,44.5151111 C114.296745,45.1186667 116.607155,45.4444444 119,45.4444444 C132.254857,45.4444444 143,35.4952593 143,23.2222222 C143,10.9491852 132.254857,1 119,1 L119,1 Z M121.385093,30.9259259 L115.273292,24.4074074 L103.347826,30.9259259 L116.465839,17 L122.726708,23.5185185 L134.503106,17 L121.385093,30.9259259 L121.385093,30.9259259 Z" id="Messenger"></path>
+            </g>
+        </g>
+    </g>
+</svg>

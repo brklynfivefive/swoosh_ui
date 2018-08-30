@@ -1,0 +1,141 @@
+#swoosh-interactiveTutorial-view{
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+    padding: 0 17px;
+	background: transparent;
+    overflow: hidden;
+    transform: scale3d(1, 1, 3);
+    opacity: 0;
+}
+
+body[swoosh-screen-type="wide"] #swoosh-interactiveTutorial-view{
+    padding: 0;
+    margin: 0 10% 0 10%;
+}
+
+.tutorialHighlightmodeDim{
+    opacity: 0.2 !important;
+}
+
+#swoosh-interactiveTutorial-view > div{
+    position: absolute;
+    top: 0;
+    width: calc(100% - 68px);
+    padding: 16px 14px;
+    border-radius: 10px;
+    color: #fff;
+    background: #252525;
+    transform: translateZ(0);
+}
+
+body[swoosh-screen-type="wide"] #swoosh-interactiveTutorial-view > div{
+    width: 40%;
+}
+
+#swoosh-interactiveTutorial-view > div > p:before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px 15px;
+    border-color: transparent transparent #252525 transparent;
+    top: -14px;
+    left: 20px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-1{
+    margin-top: 220px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-2{
+    margin-top: 254px;
+    width: 120px;
+    left: 200px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-2 > p:before{
+    border-width: 11px 15px 11px 0;
+    border-color: transparent #252525 transparent transparent;
+    top: 50px;
+    left: -13px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-3{
+    margin-top: 300px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-3 > p:before, #swoosh-interactiveTutorial-view .tutorialview-4 > p:before, #swoosh-interactiveTutorial-view .tutorialview-deskfocus-intro > p:before, #swoosh-interactiveTutorial-view .tutorialview-8 > p:before, #swoosh-interactiveTutorial-view .tutorialview-10 > p:before, #swoosh-interactiveTutorial-view .tutorialview-12 > p:before, #swoosh-interactiveTutorial-view .tutorialview-13 > p:before, #swoosh-interactiveTutorial-view .tutorialview-14 > p:before{
+    border-width: 15px 15px 0 15px;
+    border-color: #252525 transparent transparent transparent;
+    bottom: -14px;
+    left: 20px;
+    top: initial;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-8 > p:before{
+    right: 50px;
+    left: initial;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-7 > p:nth-child(2), #swoosh-interactiveTutorial-view .tutorialview-14 > p:nth-child(2){
+    margin-top: 4px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-4{
+    margin-top: 350px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-4 > p:before{
+    left: initial;
+    right: 10px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-11 > p:before{
+    top: -10px;
+    left: initial;
+    right: 10px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-5{
+    margin-top: 100px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-deskfocus-intro{
+    margin-top: 150px;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-15{
+    padding: 25px 14px;
+    top: 50%; 
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-15 > p:before{
+    display: none;
+}
+
+#swoosh-interactiveTutorial-view .tutorialview-15 p:nth-child(2){
+    margin-top: 5px;
+}
+
+body[swoosh-screen-type="wide"] #swoosh-interactiveTutorial-view .tutorialview-2, body[swoosh-screen-type="wide"] #swoosh-interactiveTutorial-view .tutorialview-3, body[swoosh-screen-type="wide"] #swoosh-interactiveTutorial-view .tutorialview-4, body[swoosh-screen-type="wide"] #swoosh-interactiveTutorial-view .tutorialview-8{
+    left: initial;
+    right: 0;
+}
+
+body[swoosh-screen-type="wide"] #swoosh-interactiveTutorial-view .tutorialview-15{
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+body[swoosh-screen-type="wide"]  #swoosh-interactiveTutorial-view .tutorialview-2{
+    width: 120px;
+    right: 200px;
+}

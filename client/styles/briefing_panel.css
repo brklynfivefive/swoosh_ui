@@ -1,0 +1,285 @@
+.swoosh-briefingPanel{
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: #fff;
+	transform: translate3d(0, 100%, 0);
+}
+
+.swoosh-briefingPanel .bfP-focus{
+    position: absolute;
+	height: 100%;
+	margin: 0 auto;
+    top: 0;
+	left: 0;
+	right: 0;
+    background: #fff;
+	overflow: hidden;
+    transform: translateZ(0);
+}
+
+.bfP-focus .view-bar{
+    position: absolute;
+    display: flex;
+    top: 0;
+    z-index: 2;
+    width: calc(100% - 34px);
+    color: #252525;
+    line-height: 31px;
+    padding-top: 25px;
+    padding-left: 17px;
+    background: #fff;
+    padding-right: 17px;
+    justify-content: space-between;
+}
+
+.bfP-focus .view-bar[swoosh-current="scrolled"]{
+    box-shadow: 0 0 1px rgba(0,0,0,.4);
+}
+
+.bfP-focus .view-head{
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.swoosh-briefingPanel[swoosh-object-id="all"] .bfP-focus .view-head{
+    justify-content: flex-start;   
+}
+
+.bfP-focus .view-action-close{
+    margin-left: -17px;
+    display: flex;
+    transform: translateZ(0);
+}
+
+.bfP-focus .view-action-close .actionicon{
+    padding: 10px 17px;
+    transform: translateZ(0);
+}
+
+.bfP-focus .view-action-close .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/close.svg);
+    -webkit-mask-size: 17px 17px;
+}
+
+.bfP-focus .view-action-addtag{
+    display: flex;
+    margin-left: 0;
+    margin-right: -17px;
+    height: 37px;
+    text-transform: uppercase;
+}
+
+.bfP-focus .view-action-addtag .actionicon{
+    padding: 10px 17px;
+    display: flex;
+    color: #252525;
+    align-items: center;
+    transform: translateZ(0);
+}
+
+.bfP-focus .view-action-addtag .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-right: 7px;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/addnew.svg);
+    -webkit-mask-size: 17px 17px;
+}
+
+.bfP-focus .view-title{
+    display: flex;
+    color: #252525;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    transition: all 200ms ease;
+}
+
+.bfP-focus .view-title p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.bfP-focus .focusview-stories{
+    height: calc(100% - 90px);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    padding-top: 90px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
+}
+
+.bfP-focus .focus-story{
+    position: relative;
+    height: 38%;
+    margin: 0 17px;
+    margin-bottom: 13px;
+    overflow: hidden;
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+
+@media all and (max-height: 600px) {
+
+    .bfP-focus .focus-story{
+        position: relative;
+        height: 48%;
+    }
+
+}
+
+.bfP-focus .focus-story[swoosh-object-status="only"]{
+    height: 80%;
+}
+
+.bfP-focus .focus-end{
+    position: relative;
+    padding: 15px 19px 25px 19px;
+    color: #505050;
+    transform: translateZ(0);
+}
+
+.bfP-focus .focus-all-end{
+    position: relative;
+    padding: 15px 19px 25px 19px;
+    color: #505050;
+    transform: translateZ(0);
+}
+
+.focus-story .story-photo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.focus-story .story-photo .obj{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    top: 0;
+    bottom: 0;
+}
+
+.focus-story .story-head{
+    color: #252525;
+    position: absolute;
+    width: calc(100% - 34px);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 17px;
+    transition: opacity 200ms ease;
+    display: block;
+}
+
+.focus-story .story-head[swoosh-object-type="photo"]{
+    color: #fff;
+    bottom: 20px;
+    top: initial;
+    transform: none;
+    text-shadow: 0 0 20px #252525;
+}
+
+.focus-story .story-head .storyHeadDesc{
+    margin-top: 6px;
+}
+
+.focus-story .story-source{
+    margin-top: 10px;
+    color: #505050;
+}
+
+.focus-story .story-source .readmoreGuide{
+    margin-top: 1px;
+}
+
+.focus-story .story-head[swoosh-object-type="photo"] .story-source{
+    color: #fff;
+}
+
+.focus-story .story-head p{
+    width: 90%;
+}
+
+.focus-story .story-briefingtag p{
+    padding: 6px 7px;
+    display: table;
+    width: auto;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.9);
+    margin-bottom: 8px;
+    text-shadow: none;
+    border-radius: 10px;
+}
+
+.focus-story .story-head[swoosh-object-type="photo"] .story-briefingtag p{
+    color: #252525;
+    background: rgba(255, 255, 255, 0.9);
+    text-shadow: none;
+}
+
+.focus-story .story-action-share{
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+}
+
+.briefingCompare-view .focus-story .story-action-share{
+    bottom: -6px;
+    right: 10px;
+}
+
+.focus-story .story-action-share .actionicon{
+    padding: 15px 17px;
+    filter: none;
+    transform: translateZ(0);
+}
+
+.focus-story .story-head[swoosh-object-type="photo"] .story-action-share .actionicon{
+    filter: drop-shadow(0 0 3px #000);
+    transform: translateZ(0);
+}
+
+.focus-story .story-head .story-action-share .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 20px;
+    height: 6px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/moreoption.svg);
+    -webkit-mask-size: 20px 6px;
+}
+
+.focus-story .story-head[swoosh-object-type="photo"] .story-action-share .obj{
+    background: #fff;
+}
+
+.swoosh-briefingPanel div[swoosh-object-filter="filtered"]{
+    display: none;
+}

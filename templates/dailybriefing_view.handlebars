@@ -1,0 +1,215 @@
+{{#if array}}
+{{#array}}
+<div class="bfP-view" swoosh-object-id="{{tabcount}}" banana-status="1">
+    <div class="bfP-storieslist" swoosh-current="">
+        {{#if focusstories}}
+        <div class="focusstories-group">
+            {{#ifCond focusstoriesCount '==' '1'}}
+                <p class="textSize4 textWeightBold highlightstoriesTitle">{{focusstoriesCount}} focus story</p>
+            {{else}}
+                <p class="textSize4 textWeightBold highlightstoriesTitle">{{focusstoriesCount}} focus stories</p>
+            {{/ifCond}}
+            <ul>
+                {{#each focusstories}}
+                    {{#if url}}
+                    <div class="highlighted-story" swoosh-object-id="{{tweet_id}}" swoosh-current="" swoosh-object-type="briefingstory" swoosh-object-link="{{url}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-object-section="{{section}}" banana-status="1" swoosh-object-array='{{toJSON ../this}}'>
+                    {{else}}
+                    <div class="highlighted-story" swoosh-object-id="{{tweet_id}}" swoosh-current="" swoosh-object-type="briefingstory" swoosh-object-link="none" swoosh-object-sentiment="{{sentiment.score}}" swoosh-object-section="{{section}}" banana-status="1" swoosh-object-array='{{toJSON ../this}}'>
+                    {{/if}}
+                        {{#if original_image}}
+                        <div class="story-photo">
+                            <div class="obj" style="background-image: url('{{original_image}}');"></div>
+                        </div>
+                        <div class="story-head" swoosh-object-type="photo">
+                            {{#if descriptionfocus}}
+                            <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                            <p class="textSize2 textWeightReg2 storyHeadTitle storyHeadDesc" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+                            {{else}}
+                            <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                            {{/if}}
+                        {{else}}
+                        {{#if photo}}
+                        <div class="story-photo">
+                            <div class="obj" style="background-image: url('{{photo}}');"></div>
+                        </div>
+                        <div class="story-head" swoosh-object-type="photo">
+                            {{#if descriptionfocus}}
+                            <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                            <p class="textSize2 textWeightReg2 storyHeadTitle storyHeadDesc" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+                            {{else}}
+                            <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                            {{/if}}
+                        {{else}}
+                        <div class="story-head">
+                            {{#if descriptionfocus}}
+                            <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                            <p class="textSize2 textWeightReg2 storyHeadTitle storyHeadDesc" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+                            {{else}}
+                            <p class="textSize4 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                            {{/if}}
+                        {{/if}}
+                        {{/if}}
+                            
+                            <div class="story-source">
+                                <p class="textSize1 textWeightMid">{{target}}, <span class="textWeightMid focusStoryTs" swoosh-data="{{ts}}"></span></p>
+                            </div>
+                            <div class="story-action-share">
+                                <div class="actionicon"><div class="obj"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </ul>
+        </div>
+        {{/if}}
+
+        <div class="head-info-group">
+            <div class="sentiment-group">
+                <p class="textSize4 textWeightBold sentimentTitle">sentiment analysis</p>
+                <div class="sentiment-data">
+                    <div class="highPosStat" swoosh-object-data="highpos">
+                        <p class="textSize6 textWeightMid highPosStatText">73 highly positive articles</p>
+                        <div class="stat-bar" swoosh-object-data="90"></div>
+                    </div>
+                    <div class="normalPosStat" swoosh-object-data="normalpos">
+                        <p class="textSize6 textWeightMid normalPosStatText">23 positive articles</p>
+                        <div class="stat-bar" swoosh-object-data="30"></div>
+                    </div>
+                    <div class="normalNegStat" swoosh-object-data="normalneg">
+                        <p class="textSize6 textWeightMid normalNegStatText">20 negative articles</p>
+                        <div class="stat-bar" swoosh-object-data="10"></div>
+                    </div>
+                    <div class="highNegStat" swoosh-object-data="highneg">
+                        <p class="textSize6 textWeightMid highNegStatText">23 quite negative articles</p>
+                        <div class="stat-bar" swoosh-object-data="20"></div>
+                    </div>
+                </div>
+            </div>
+
+            {{#if headstories}}
+            <div class="headstories-group">
+                {{#ifCond headstoriesCount '==' '1'}}
+                    <p class="textSize4 textWeightBold headstoriesTitle">{{headstoriesCount}} head story</p>
+                {{else}}
+                    <p class="textSize4 textWeightBold headstoriesTitle">{{headstoriesCount}} head stories</p>
+                {{/ifCond}}
+                {{#if keywords}}
+                <div class="bfP-focuspoints" swoosh-current="">
+                    <ul>
+                        {{#each keywords}}
+                        <li banana-tap="1">
+                            <span class="textSize3 textWeightMid tagContainer">{{this}}</span>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+                <ul>
+                    {{#each headstories}}
+                    <li swoosh-data="">
+                        {{#if story.url}}
+                        <div class="story-head" banana-tap="1" swoosh-object-type="briefingstory" swoosh-object-section="{{story.section}}" swoosh-object-sentiment="{{story.sentiment.score}}" swoosh-object-id="{{story.tweet_id}}" swoosh-object-link="{{story.url}}" swoosh-object-array='{{toJSON this.story}}'>
+                        {{else}}
+                        <div class="story-head" swoosh-object-type="briefingstory" swoosh-object-section="{{story.section}}" swoosh-object-sentiment="{{story.sentiment.score}}" swoosh-object-id="{{story.tweet_id}}" swoosh-object-link="none" swoosh-object-array='{{toJSON this.story}}'>
+                        {{/if}}
+                            <div class="storyContent">
+                                <p class="textSize5 textWeightMid storyHeadTitle" swoosh-object-origin="{{story.target}}">{{story.titleonly}}</p>
+                                <div class="story-source">
+                                    <p class="textSize0 textWeightMid">{{story.target}}</p>
+                                </div>
+                            </div>
+                            <div class="story-action-share">
+                                <div class="actionicon"><div class="obj"></div></div>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+
+        {{#if stories}}
+        <div class="allstories-group" swoosh-current="folded">
+            <div class="stories-foldarea">
+                {{#ifCond storiescount '==' '1'}}
+                    <p class="textSize4 textWeightBold allstoriesTitle">all {{storiescount}} story</p>
+                {{else}}
+                    <p class="textSize4 textWeightBold allstoriesTitle">all {{storiescount}} stories</p>
+                {{/ifCond}}
+                <div class="stories-action-toggle">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+            </div>
+            <ul>
+                {{#each stories}}
+                <li swoosh-object-count="{{storiescount}}" swoosh-data="">
+                    <div class="storyHeadGroup">
+                        <div class="story-time">
+                            <p class="textSize1 textWeightBold">{{time}}</p>
+                        </div>
+                        
+                        <div class="story-action-toggle" banana-tap="1" swoosh-current="closed">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                        
+                        {{#if headstory}}
+                        {{#each headstory}}
+                        {{#if url}}
+                        <div class="story-head" banana-tap="1" swoosh-object-type="briefingstory" swoosh-object-section="{{section}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-object-id="{{tweet_id}}" swoosh-object-link="{{url}}" swoosh-object-array='{{toJSON ../this}}'>
+                        {{else}}
+                        <div class="story-head" swoosh-object-type="briefingstory" swoosh-object-section="{{section}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-object-id="{{tweet_id}}" swoosh-object-link="none" swoosh-object-array='{{toJSON ../this}}'>
+                        {{/if}}
+                            <div class="storyContent">
+                                {{#if descriptionfocus}}
+                                <p class="textSize5 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+                                <p class="textSize2 textWeightReg2 storyHeadTitle storyHeadDesc" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+                                {{else}}
+                                <p class="textSize5 textWeightMid storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                                {{/if}}
+                                <div class="story-source">
+                                    <p class="textSize0 textWeightMid">{{target}}</p>
+                                </div>
+                            </div>
+                            <div class="story-action-share">
+                                <div class="actionicon"><div class="obj"></div></div>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{/if}}
+                    </div>
+
+                    <div class="story-others" banana-status="0">
+                        {{#if storiesGroup}}
+                        {{#each storiesGroup}}
+                        {{#if url}}
+                        <div class="storyObj" banana-tap="1" swoosh-object="" swoosh-object-type="briefingstory" swoosh-object-section="{{section}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-content-type="{{mediatype}}" swoosh-object-id="{{tweet_id}}" swoosh-object-link="{{url}}" swoosh-object-array='{{toJSON ../this}}'>
+                        {{else}}
+                        <div class="storyObj" swoosh-object="" swoosh-object-type="briefingstory" swoosh-object-section="{{section}}" swoosh-object-sentiment="{{sentiment.score}}" swoosh-content-type="{{mediatype}}" swoosh-object-id="{{tweet_id}}" swoosh-object-link="none" swoosh-object-array='{{toJSON ../this}}'>
+                        {{/if}}
+                            <div class="storyContent">
+                                {{#if titleonly}}
+                                <p class="textSize3 textWeightReg2 storyHeadTitle">{{titleonly}}</p>
+                                {{else}}
+                                <p class="textSize3 textWeightReg2 storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+                                {{/if}}
+                                <div class="story-source">
+                                    <p class="textSize0 textWeightMid">{{target}}</p>
+                                </div>
+                            </div>
+                            <div class="story-action-share">
+                                <div class="actionicon"><div class="obj"></div></div>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{/if}}
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{/array}}
+{{/if}}

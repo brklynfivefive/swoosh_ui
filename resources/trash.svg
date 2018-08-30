@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="20px" viewBox="0 0 15 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+        <path d="M13.4722922,17.9279825 C13.4069112,18.4812588 12.9092456,18.9297778 12.3557074,18.9297778 L2.64429259,18.9297778 C2.09300082,18.9297778 1.59318651,18.4820859 1.52770776,17.9279825 L0,5 L15,5 L13.4722922,17.9279825 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15" height="13.9297778" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="24-px-Icons" transform="translate(-242.000000, -192.000000)">
+            <g id="Group-3" transform="translate(237.000000, 190.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Rectangle-3"></g>
+                <g id="Trash" mask="url(#mask-2)" stroke="#221F20">
+                    <g transform="translate(5.000000, 3.000000)">
+                        <use id="Stroke-1" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+                        <path d="M0,3 L15,3" id="Stroke-3" stroke-width="2"></path>
+                        <path d="M5,2.47523962 L5,1.00677471 C5,0.45074839 5.44371665,0 5.99980749,0 L9.00019251,0 C9.55237094,0 10,0.453997096 10,1.00677471 L10,2.47523962" id="Stroke-5" stroke-width="2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

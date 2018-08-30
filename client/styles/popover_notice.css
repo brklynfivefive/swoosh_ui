@@ -1,0 +1,81 @@
+#swoosh-notice-view{
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: #fff;
+	transform: translate3d(0, 100%, 0);
+    overflow: hidden;
+}
+
+#swoosh-notice-view .head-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 17px 18px;
+}
+
+#swoosh-notice-view .head-title{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: #252525;
+    padding: 0 17px 20px 17px;
+    text-transform: uppercase;
+}
+
+#swoosh-notice-view .head-control > div{
+    display: flex;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+#swoosh-notice-view .head-control .actionicon{
+    padding: 10px;
+}
+
+#swoosh-notice-view .head-action-close .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/close.svg);
+    -webkit-mask-size: 17px 17px;
+}
+
+#swoosh-notice-view .notice-viewArea{
+    position: absolute;
+    height: calc(100% - 123px);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 0 17px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.notice-viewArea li{
+    color: #252525;
+    padding: 18px 0;
+    border-bottom: 2px solid #efefef;
+}
+
+.notice-viewArea .noticeitemContentText{
+    margin-top: 10px;
+}
+
+.noticeitemContentText p{
+    margin-bottom: 9px;
+}
+
+.notice-viewArea .noticeurlGuide{
+    margin-top: 13px;
+    color: #838383;
+}

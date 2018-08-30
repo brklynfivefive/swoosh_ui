@@ -1,0 +1,119 @@
+#swoosh-comparePresetManage-view{
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.45);
+	transform: translate3d(0, 100%, 0);
+}
+
+#swoosh-comparePresetManage-view .view-minipopover-container{
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+#swoosh-comparePresetManage-view .head-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #252525;
+    padding: 15px 17px 18px;
+}
+
+#swoosh-comparePresetManage-view .head-title{
+    display: flex;
+    flex-direction: column;
+    padding: 0 17px 20px 17px;
+    color: #252525;
+    text-transform: uppercase;
+}
+
+#swoosh-comparePresetManage-view .head-control > div{
+    display: flex;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+#swoosh-comparePresetManage-view .head-control .actionicon{
+    padding: 10px;
+}
+
+#swoosh-comparePresetManage-view .head-action-close .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/close.svg);
+    -webkit-mask-size: 17px 17px;
+}
+
+#swoosh-comparePresetManage-view .comparePresetManage-viewArea{
+    position: absolute;
+    height: calc(100% - 150px);
+    margin: 0 auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 17px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+#swoosh-comparePresetManage-view .comparePresetManage-presetinfo{
+    color: #252525;
+    padding: 0 17px 5px 17px;
+    text-transform: uppercase;
+}
+
+#swoosh-comparePresetManage-view .comparePresetManage-action-delete{
+    display: flex;
+    padding: 8px 17px 8px 17px;
+    align-self: baseline;
+    color: #252525;
+    align-items: center;
+}
+
+.comparePresetManage-action-delete p{
+    line-height: 21px;
+    margin-left: 7px;
+}
+
+.comparePresetManage-action-delete .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    background: #2c2c2c;
+    -webkit-mask-image: url(../../resources/trash.svg);
+    -webkit-mask-size: 18px 18px;
+}
+
+#swoosh-comparePresetManage-view ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#swoosh-comparePresetManage-view li{
+    margin-right: 13px;
+    margin-bottom: 13px;
+    background: #eaeaea;
+    padding: 9px 11px;
+    border-radius: 10px;
+    color: #252525;
+}

@@ -1,0 +1,112 @@
+#swoosh-sendFeedback-view{
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: #fff;
+	transform: translate3d(0, 100%, 0);
+}
+
+#swoosh-sendFeedback-view .head-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #252525;
+    padding: 35px 17px 18px;
+}
+
+#swoosh-sendFeedback-view .head-title{
+    display: flex;
+    flex-direction: column;
+    padding: 0 17px 20px 17px;
+    color: #252525;
+    text-transform: uppercase;
+}
+
+#swoosh-sendFeedback-view .head-control > div{
+    display: flex;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+#swoosh-sendFeedback-view .head-control > div.head-action-confirm{
+    margin-left: 0;
+    margin-right: -10px;
+    height: 37px;
+}
+
+#swoosh-sendFeedback-view .head-control .actionicon{
+    padding: 10px;
+}
+
+#swoosh-sendFeedback-view .head-action-confirm .actionicon{
+    display: flex;
+    color: #252525;
+    line-height: 17px;
+}
+
+#swoosh-sendFeedback-view .head-action-close .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/close.svg);
+    -webkit-mask-size: 17px 17px;
+}
+
+#swoosh-sendFeedback-view .head-action-confirm .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-right: 7px;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/addnew.svg);
+    -webkit-mask-size: 17px 17px;
+}
+
+#swoosh-sendFeedback-view .sendFeedback-viewArea{
+    position: absolute;
+    height: calc(100% - 164px);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 0 17px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+#swoosh-sendFeedback-view .sendFeedback-guide{
+    color: #252525;
+}
+
+.sendFeedback-form{
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.sendFeedback-form textarea{
+    background: transparent;
+	border: none;
+	resize: none;
+	-webkit-font-smoothing: antialiased;
+	outline: none;
+    width: 100%;
+    color: #252525;
+}
+
+.sendFeedback-notice{
+    padding-top: 10px;
+    color: #5a5a5a;
+    text-transform: uppercase;
+}

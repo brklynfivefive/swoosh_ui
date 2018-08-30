@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Minus Circle fill</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-6-Copy" transform="translate(-295.000000, -79.000000)" fill="#5B6C72">
+            <path d="M308.5,106 C315.955844,106 322,99.9558441 322,92.5 C322,85.0441559 315.955844,79 308.5,79 C301.044156,79 295,85.0441559 295,92.5 C295,99.9558441 301.044156,106 308.5,106 L308.5,106 Z M301.75,92.5 C301.75,92.0029437 302.154028,91.6 302.656736,91.6 L314.343264,91.6 C314.844041,91.6 315.25,91.9994783 315.25,92.5 L315.25,92.5 C315.25,92.9970563 314.845972,93.4 314.343264,93.4 L302.656736,93.4 C302.155959,93.4 301.75,93.0005217 301.75,92.5 L301.75,92.5 Z" id="Minus-Circle-fill"></path>
+        </g>
+    </g>
+</svg>

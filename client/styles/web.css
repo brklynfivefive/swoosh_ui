@@ -1,0 +1,120 @@
+body[swoosh-device-type="web"] .mainViewObj{
+    padding: 0 25%;
+}
+
+body[swoosh-device-type="web"] .intro-main{
+    padding: 0 25%;
+}
+
+body[swoosh-device-type="web"] .intro-news .news p{
+    padding: 0 40% 0 25%;
+}
+
+/* briefinghome */
+body[swoosh-device-type="web"] .main-briefingHome-view .todaybriefings-stories{
+    padding: 0 25%;
+}
+
+body[swoosh-device-type="web"] .main-briefingHome-view .tags-list li{
+    display: flex;
+    margin-right: 13px;
+}
+
+body[swoosh-device-type="web"] .main-briefingHome-view .hs-tags-list{
+    margin: 25px 0 0;
+}
+
+body[swoosh-device-type="web"] .main-briefingHome-view .hs-tags-list .storyFocuspoints{
+    padding-left: 0;
+}
+
+body[swoosh-device-type="web"] .intro-main .product-download-action{
+    display: flex;
+    margin-top: 8px;
+}
+
+body[swoosh-device-type="web"] .intro-main .product-download-action p{
+    display: flex;
+    align-self: baseline;
+    padding: 5px 12px;
+    line-height: 31px;
+    color: #fff;
+    background: #0084d6;
+}
+
+/* manageTags */
+body[swoosh-device-type="web"] .main-manageTags-view .list-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body[swoosh-device-type="web"] .main-manageTags-view .list-group li{
+    margin-right: 13px;
+}
+
+/* navbar */
+body[swoosh-device-type="web"] .main-navigation-bar{
+    padding: 45px 25% 0 25%;
+    width: 50%;
+}
+
+body[swoosh-device-type="web"] .main-navigation-bar .current-section{
+    margin-left: 0;
+}
+
+body[swoosh-device-type="web"] .main-navigation-bar[swoosh-current=briefingHome] .briefingHome-type{
+    margin-left: 0;
+}
+
+body[swoosh-device-type="web"] .main-navigation-bar[swoosh-current=manageTags] .manageTags-options{
+    margin-left: 0;
+}
+
+body[swoosh-device-type="web"] .main-navigation-bar .section-container p{
+    margin-left: 0;
+}
+
+body[swoosh-device-type="web"] .main-navigation-bar .quickaccess-container{
+    right: 25%;
+}
+
+/* briefingpanel */
+body[swoosh-device-type="web"] .swoosh-briefingPanel .head-control{
+    padding: 35px 25% 18px;
+}
+
+body[swoosh-device-type="web"] .swoosh-briefingPanel .bfP-view{
+    padding: 0 25%;
+}
+
+body[swoosh-device-type="web"] .swoosh-briefingPanel .bfP-focus{
+    padding: 0 25%;
+}
+
+body[swoosh-device-type="web"] .swoosh-briefingPanel .bfP-focus .view-bar{
+    width: calc(100% - 50%);
+    padding: 35px 0 0 18px;
+}
+
+body[swoosh-device-type="web"] .swoosh-briefingPanel .bfP-focus .focusview-stories{
+    width: calc(100% - 50%);
+}
+
+/* settings */
+body[swoosh-device-type="web"] .main-settings-view .account-action-message{
+    display: none;
+}
+
+/* actionsheet */
+body[swoosh-device-type="web"] #swoosh-actionsheet-view{
+    width: calc(50%);
+}
+
+/* popover */
+body[swoosh-device-type="web"] div[banana-type="popover"]{
+    padding: 0 25%;
+}
+
+body[swoosh-device-type="web"] div[banana-type="popover"] .popoverViewAreaObj{
+    width: calc(100% - 50% - 38px);
+}

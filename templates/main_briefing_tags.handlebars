@@ -1,0 +1,17 @@
+{{#if array}}
+{{#array}}
+{{#if storiescount}}
+<li swoosh-object-id="{{objectid}}" banana-tap="1">
+{{else}}
+<li swoosh-object-id="{{objectid}}" swoosh-object="nobriefing" banana-tap="1">
+{{/if}}
+    <div>
+        {{#if mainphoto}}
+        <p class="textSize6 textWeightMid tagContainer tagWithPhoto" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 90%), url('{{mainphoto}}');">{{tag}}</p>
+        {{else}}
+        <p class="textSize6 textWeightMid tagContainer">{{tag}}</p>
+        {{/if}}
+    </div>
+</li>
+{{/array}}
+{{/if}}

@@ -1,0 +1,3 @@
+var Handlebars = require("handlebars");module.exports = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"readLater-list\">\n    <div class=\"readLater-notice\" swoosh-current=\"exist\">\n        <p class=\"textSize16 textWeightReg readLaterIcon\"></p>\n        <p class=\"textSize9 textWeightBold\">Saved stories</p>\n    </div>\n    <ul class=\"list-group\">\n        \n    </ul>\n\n    <ul class=\"readLater-none\">\n        <p class=\"textSize10 textWeightMid\">No saved stories</p>\n        <p class=\"textSize6 textWeightReg2\">This box is empty. Find stories to save for later from Daily Briefings, Desk Focus, or Trending Stories!</p>\n    </ul>\n</div>";
+},"useData":true});

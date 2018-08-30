@@ -1,0 +1,1143 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Content-Security-Policy" 
+    content="default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https: http:; 
+    connect-src 'self' 'unsafe-inline' *; 
+    media-src 'self' 'unsafe-inline' *; 
+    style-src 'self' 'unsafe-inline' *.inthenewsrooms.com *.mixpanel.com *.mxpnl.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: *.inthenewsrooms.com *.mixpanel.com *.mxpnl.com;"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>#Newsrooms</title>
+<link rel="stylesheet" href="public/styles/swoosh_client_core.min.css" />
+<script type="text/javascript" src="public/scripts/swoosh_client_core.js"></script>
+</head>
+<body>
+    <div id="swoosh-main-view">
+        <!-- default cold startup view -->
+        <div class="main-briefingHome-view mainViewObj" banana-status="1">
+        </div>
+
+        <!-- make sure the previous view is unloaded from DOM prior to load a new one -->
+        <div class="main-manageTags-view mainViewObj" banana-status="0">
+        </div>
+
+        <!-- make sure the previous view is unloaded from DOM prior to load a new one -->
+        <div class="main-indepthStories-view mainViewObj" banana-status="0">
+        </div>
+
+        <!-- make sure the previous view is unloaded from DOM prior to load a new one -->
+        <div class="main-readLater-view mainViewObj" banana-status="0">
+        </div>
+
+        <!-- make sure the previous view is unloaded from DOM prior to load a new one -->
+        <div class="main-settings-view mainViewObj" banana-status="0">
+            <div class="settings-notice" swoosh-current="okay">
+                <p class="textSize16 textWeightReg mainsettingsIcon"></p>
+                <p class="textSize9 textWeightBold">Settings</p>
+            </div>
+
+            <div class="settings-interaction">
+                <div class="account-action-notice" banana-tap="1">
+                    <p class="textSize4 textWeightMid">NOTICE</p>
+                </div>
+                <div class="account-action-promotion" banana-tap="1">
+                    <p class="textSize4 textWeightMid">GET A STARBUCKS CARD</p>
+                </div>
+                <div class="account-action-invite" banana-tap="1">
+                    <p class="textSize4 textWeightMid">INVITE YOUR FRIENDS</p>
+                </div>
+                <div class="settings-social">
+                    <div class="account-action-fb" banana-tap="1">
+                        <div class="actionicon"><div class="obj"></div></div>
+                    </div>
+                    <div class="account-action-instagram" banana-tap="1">
+                        <div class="actionicon"><div class="obj"></div></div>
+                    </div>
+                    <div class="account-action-twitter" banana-tap="1">
+                        <div class="actionicon"><div class="obj"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-account">
+                <p class="textSize4 textWeightBold subTitle">Account details</p>
+                <div class="account-info-fields">
+                    <input type="email" autocorrect="off" autocapitalize="none" name="settingsAccountEmailField" id="settingsAccountEmailField" size="14" placeholder="" class="textSize6 textWeightMid" />
+                    <input type="text" autocorrect="off" autocapitalize="none" name="settingsAccountUsernameField" id="settingsAccountUsernameField" size="14" placeholder="" class="textSize6 textWeightMid" />
+                    <input type="password" name="settingsAccountPassField" id="settingsAccountPassField" size="14" placeholder="new password" class="textSize6 textWeightMid" />
+                    <div class="account-action-editConfirm" banana-tap="1" banana-status="1">
+                        <div class="actionicon"><div class="obj"></div></div>
+                        <p class="textSize4 textWeightMid">SAVE CHANGES</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-configs">
+                <p class="textSize4 textWeightBold subTitle">Daily Briefing</p>
+                <div class="account-action-hourconfig" banana-tap="1">
+                    <div class="actionicon"><div class="obj"></div></div>
+                    <p class="textSize4 textWeightMid">You are currently receiving daily briefing alert at <span class="settingsBriefingHourConfig">?AM</span></p>
+                </div>
+
+                <div class="account-action-prefconfig_socpol" banana-tap="1">
+                    <div class="actionicon"><div class="obj"></div></div>
+                    <p class="textSize4 textWeightMid">Manage your briefing preference (Society/Politics)</p>
+                </div>
+            </div>
+
+            <div class="settings-others">
+                <div class="account-action-tutorial" banana-tap="1">
+                    <p class="textSize4 textWeightMid">VIEW TUTORIAL AGAIN</p>
+                </div>
+                <div class="account-action-message" banana-tap="1">
+                    <p class="textSize4 textWeightMid">SEND AN EMAIL TO US</p>
+                </div>
+                <div class="account-action-feedback" banana-tap="1">
+                    <p class="textSize4 textWeightMid">SEND A FEEDBACK</p>
+                </div>
+                <div class="account-action-signout" banana-tap="1">
+                    <p class="textSize4 textWeightMid">SIGN OUT</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-noticeticker-bar" banana-status="0">
+            <div class="noticeticker-container">
+                <div class="icon"></div>
+                <p class="textSize3 textWeightBold noticetickerText"></p>
+            </div>
+        </div>
+
+        <!-- persistent navigation bar -->
+        <div class="main-navigation-bar" swoosh-current="briefingHome">
+            <div class="navmenu-container">
+                <div class="navitem" swoosh-target="briefingHome">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="navitem" swoosh-target="manageTags">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="navitem" swoosh-target="readLater">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="navitem" swoosh-target="settings">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EOS main view -->
+    </div>
+
+    <div id="swoosh-briefingPanelGroups">
+        
+    </div>
+
+    <div id="swoosh-notice-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold">Notices</p>
+            </div>
+        </div>
+        
+        <div class="notice-viewArea popoverViewAreaObj">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <div id="swoosh-marketingpromotion-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold">Promotion</p>
+                <p class="textSize4 textWeightMid">Tap to learn more</p>
+            </div>
+        </div>
+        
+        <div class="marketingpromotion-viewArea popoverViewAreaObj">
+            <div class="promotion-image" swoosh-object-link="https://inthenewsrooms.com/promotion/"></div>
+        </div>
+    </div>
+
+    <div id="swoosh-inviteFriends-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold">Invite your friends</p>
+            </div>
+        </div>
+        
+        <div class="inviteFriends-viewArea popoverViewAreaObj">
+            <div class="inviteFriends-guide">
+                <p class="textSize4 textWeightMid">Share your referral code to your friends and invite them to #Newsrooms!</p>
+            </div>
+            <div class="inviteFriends-code" banana-tap="1">
+                <p class="textSize4 textWeightReg2">tap it to share</p>
+                <p class="textSize12 textWeightMid inviteReferralCodeText"></p>
+            </div>
+            <div class="inviteFriends-counts">
+                <p class="textSize4 textWeightBold inviteReferralCountsText">Your referral counts</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-hsTagsSuggestion-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="head-action-confirm" banana-tap="1" banana-status="0" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">DONE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold addBriefingTagTitleStatus">Create a new briefing</p>
+                <p class="textSize9 textWeightBold">with the following tags</p>
+            </div>
+
+            <div class="tagSuggestion-newTag-preview">
+                <p class="textSize6 textWeightMid newTagGuide">Your new briefing tag will include:</p>
+                <p class="textSize10 textWeightMid newTagText"></p>
+            </div>
+        </div>
+        
+        <div class="tagSuggestion-viewArea popoverViewAreaObj">
+            <div class="tagSuggestion-guide">
+                <p class="textSize4 textWeightMid">Select one or more tags</p>
+            </div>
+
+            <div class="tagSuggestion-group">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-sendFeedback-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="head-action-confirm" banana-tap="1" banana-status="1" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">SEND</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold sendFeedbackTitleStatus">Share</p>
+                <p class="textSize9 textWeightBold">your thoughts</p>
+            </div>
+        </div>
+
+        <div class="sendFeedback-viewArea popoverViewAreaObj">
+            <div class="sendFeedback-guide">
+                <p class="textSize4 textWeightMid addTagGuide">Tell us any thoughts you had while using #Newsrooms. Every idea and comment matters to us. We will respond to you by email shortly.</p>
+            </div>
+
+            <div class="sendFeedback-form">
+                <textarea name="sendFeedbackMessageField" id="sendFeedbackMessageField" rows="8" placeholder="type message here" class="textSize6 textWeightReg2"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-interactiveTutorial-view" banana-type="popover" banana-status="0">
+        <div class="tutorialview-1" banana-status="1">
+            <p class="textSize3 textWeightMid">You can check your daily briefings here with one tap. Do not miss new stories by being alert with Daily Briefings.</p>
+        </div>
+        <div class="tutorialview-deskfocus-intro" banana-status="0">
+            <p class="textSize3 textWeightMid">Every six hours in Desk focus section, there are suggestions of other important/trending news topics (even if it’s not on your daily briefing tag list).</p>
+        </div>
+        <div class="tutorialview-2" banana-status="0">
+            <p class="textSize3 textWeightMid">Trending provides you the latest hot stories every 20 minutes.</p>
+        </div>
+        <div class="tutorialview-3" banana-status="0">
+            <p class="textSize3 textWeightMid">News articles from seven different fields—US, politics, world, sports, business, technology, and gaming—will be constantly updated.</p>
+        </div>
+        <div class="tutorialview-4" banana-status="0">
+            <p class="textSize3 textWeightMid">Tap here to save articles for later or to share insightful articles with other social media.</p>
+        </div>
+        <div class="tutorialview-5" banana-status="0">
+            <p class="textSize3 textWeightMid">Every hour, we deliver news articles related to the tags you set, if there is anything to update.</p>
+        </div>
+        
+        <div class="tutorialview-7" banana-status="0">
+            <p class="textSize4 textWeightMid">Now, let’s learn how to set your own tags. There are 3 ways to do that.</p>
+            <p class="textSize3 textWeightMid">#1: Tap here to add new tags for your Daily Briefings.</p>
+        </div>
+        <div class="tutorialview-8" banana-status="0">
+            <p class="textSize3 textWeightMid">#2: If you find anything interesting in Trending, tap "ADD" button.</p>
+        </div>
+        <div class="tutorialview-9" banana-status="0">
+            <p class="textSize3 textWeightMid">#2: By selecting one or more suggested tags here, you can create and directly add a new tag including all the selected tags.</p>
+        </div>
+        <div class="tutorialview-10" banana-status="0">
+            <p class="textSize3 textWeightMid">#3: Lastly, add any of the following tags that interest you in Desk focus. Open any Desk focus briefing and find "Add" button in the briefing panel.</p>
+        </div>
+        <div class="tutorialview-12" banana-status="0">
+            <p class="textSize3 textWeightMid">You can change your morning briefing alert time.</p>
+        </div>
+        <div class="tutorialview-13" banana-status="0">
+            <p class="textSize3 textWeightMid">Also, you can manage your briefing preference to get more news articles that align with your stance if you need. The default setting for the newspaper preference is unbiased/neutral.</p>
+        </div>
+        <div class="tutorialview-14" banana-status="0">
+            <p class="textSize4 textWeightMid">Invite your friends and score referral counts!</p>
+            <p class="textSize3 textWeightMid">The invited friend must enter your referral code when he or she registers in order to get the referral count.</p>
+        </div>
+        <div class="tutorialview-15" banana-status="0">
+            <p class="textSize4 textWeightMid">All done, start your own newsroom now!</p>
+            <p class="textSize3 textWeightMid">Also, discover more about our referral promotion on settings section.</p>
+        </div>
+    </div>
+
+    <div id="swoosh-addComparePreset-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="head-action-confirm" banana-tap="1" banana-status="0" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">SAVE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold addBriefingTagTitleStatus">Create a new</p>
+                <p class="textSize9 textWeightBold">compare preset</p>
+            </div>
+        </div>
+
+        <div class="addComparePreset-viewArea popoverViewAreaObj">
+            <div class="addComparePreset-guide">
+                <p class="textSize4 textWeightMid">Select sources you want to add to your new compare preset</p>
+            </div>
+
+            <div class="addComparePreset-form">
+                <input type="text" name="addComparePresetField" id="addComparePresetField" size="14" placeholder="new preset name" class="textSize6 textWeightMid" />
+            </div>
+
+            <div class="addComparePreset-sourceslist">
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">Fact-checkers</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="factcheckdotorg" banana-tap="1">
+                            <p class="textSize4 textWeightMid">FactCheck.org</p>
+                        </li>
+                        <li swoosh-object-data="PolitiFact" banana-tap="1">
+                            <p class="textSize4 textWeightMid">PolitiFact</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">U.S./World</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="NYT" banana-tap="1">
+                            <p class="textSize4 textWeightMid">New York Times</p>
+                        </li>
+                        <li swoosh-object-data="CNN" banana-tap="1">
+                            <p class="textSize4 textWeightMid">CNN</p>
+                        </li>
+                        <li swoosh-object-data="NBC" banana-tap="1">
+                            <p class="textSize4 textWeightMid">NBC/CNBC/MSNBC</p>
+                        </li>
+                        <li swoosh-object-data="politico" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Politico</p>
+                        </li>
+                        <li swoosh-object-data="LATimes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">LA Times</p>
+                        </li>
+                        <li swoosh-object-data="FiveThirtyEight" banana-tap="1">
+                            <p class="textSize4 textWeightMid">FiveThirtyEight</p>
+                        </li>
+                        <li swoosh-object-data="dailykos" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Daily Kos</p>
+                        </li>
+                        <li swoosh-object-data="Upworthy" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Upworthy</p>
+                        </li>
+                        <li swoosh-object-data="NewCo" banana-tap="1">
+                            <p class="textSize4 textWeightMid">NewCo</p>
+                        </li>
+                        <li swoosh-object-data="NewRepublic" banana-tap="1">
+                            <p class="textSize4 textWeightMid">New Republic</p>
+                        </li>
+                        <li swoosh-object-data="voxdotcom" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Vox</p>
+                        </li>
+                        <li swoosh-object-data="thinkprogress" banana-tap="1">
+                            <p class="textSize4 textWeightMid">ThinkProgress</p>
+                        </li>
+                        <li swoosh-object-data="OversightDems" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Oversight Democrats</p>
+                        </li>
+                        <li swoosh-object-data="ViceHuffBuzzFeed" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Vice News/Huffington Post/BuzzFeed</p>
+                        </li>
+                        <li swoosh-object-data="backchnnl" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Backchannel by WIRED</p>
+                        </li>
+                        <li swoosh-object-data="jacobinmag" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Jacobin Magazine</p>
+                        </li>
+                        <li swoosh-object-data="inthesetimesmag" banana-tap="1">
+                            <p class="textSize4 textWeightMid">In These Times</p>
+                        </li>
+                        <li swoosh-object-data="MotherJones" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Mother Jones</p>
+                        </li>
+                        <li swoosh-object-data="TheAdvocateMag" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Advocate Magazine</p>
+                        </li>
+                        <li swoosh-object-data="thedailybeast" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Daily Beast</p>
+                        </li>
+                        <li swoosh-object-data="FoxNews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Fox News</p>
+                        </li>
+                        <li swoosh-object-data="Bloomberg" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Bloomberg</p>
+                        </li>
+                        <li swoosh-object-data="WSJ" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Wall Street Journal</p>
+                        </li>
+                        <li swoosh-object-data="TheEconomist" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Economist</p>
+                        </li>
+                        <li swoosh-object-data="FT" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Financial Times</p>
+                        </li>
+                        <li swoosh-object-data="WashTimes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Washington Times</p>
+                        </li>
+                        <li swoosh-object-data="NRO" banana-tap="1">
+                            <p class="textSize4 textWeightMid">National Review</p>
+                        </li>
+                        <li swoosh-object-data="townhallcom" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Townhall</p>
+                        </li>
+                        <li swoosh-object-data="amspectator" banana-tap="1">
+                            <p class="textSize4 textWeightMid">American Spectator</p>
+                        </li>
+                        <li swoosh-object-data="DailyCaller" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Daily Caller</p>
+                        </li>
+                        <li swoosh-object-data="JudicialWatch" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Judicial Watch</p>
+                        </li>
+                        <li swoosh-object-data="AP" banana-tap="1">
+                            <p class="textSize4 textWeightMid">AP</p>
+                        </li>
+                        <li swoosh-object-data="NewsHour" banana-tap="1">
+                            <p class="textSize4 textWeightMid">PBS NewsHour</p>
+                        </li>
+                        <li swoosh-object-data="cspan" banana-tap="1">
+                            <p class="textSize4 textWeightMid">C-SPAN</p>
+                        </li>
+                        <li swoosh-object-data="Newsweek" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Newsweek</p>
+                        </li>
+                        <li swoosh-object-data="TheAtlantic" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Atlantic</p>
+                        </li>
+                        <li swoosh-object-data="BusinessInsider" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Business Insider</p>
+                        </li>
+                        <li swoosh-object-data="NPR" banana-tap="1">
+                            <p class="textSize4 textWeightMid">NPR</p>
+                        </li>
+                        <li swoosh-object-data="WP" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Washington Post</p>
+                        </li>
+                        <li swoosh-object-data="USATODAY" banana-tap="1">
+                            <p class="textSize4 textWeightMid">USA TODAY</p>
+                        </li>
+                        <li swoosh-object-data="Reuters" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Reuters</p>
+                        </li>
+                        <li swoosh-object-data="chicagotribune" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Chicago Tribune</p>
+                        </li>
+                        <li swoosh-object-data="ABCPolitics" banana-tap="1">
+                            <p class="textSize4 textWeightMid">ABC News Politics</p>
+                        </li>
+                        <li swoosh-object-data="BostonGlobe" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Boston Globe</p>
+                        </li>
+                        <li swoosh-object-data="BBCWorld" banana-tap="1">
+                            <p class="textSize4 textWeightMid">BBC World</p>
+                        </li>
+                        <li swoosh-object-data="AJENews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Al Jazeera World</p>
+                        </li>
+                        <li swoosh-object-data="Forbes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Forbes</p>
+                        </li>
+                        <li swoosh-object-data="HarvardBiz" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Harvard Business Review</p>
+                        </li>
+                        <li swoosh-object-data="NewYorker" banana-tap="1">
+                            <p class="textSize4 textWeightMid">New Yorker</p>
+                        </li>
+                        <li swoosh-object-data="thehill" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Hill</p>
+                        </li>
+                        <li swoosh-object-data="thenation" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Nation</p>
+                        </li>
+                        <li swoosh-object-data="TheStreet" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Street</p>
+                        </li>
+                        <li swoosh-object-data="TIME" banana-tap="1">
+                            <p class="textSize4 textWeightMid">TIME</p>
+                        </li>
+                        <li swoosh-object-data="VentureBeat" banana-tap="1">
+                            <p class="textSize4 textWeightMid">VentureBeat</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">World/Asia: China, Japan, Korea</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="YonhapNews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Yonhap News Agency (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="TheKoreaHerald" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Korea Herald (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="EnglishChosun" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Chosun Daily English (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="JoongAngDaily" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Joong-Ang Daily English (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="thekortimes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Korea Times (South Korea)</p>
+                        </li>
+                        <li swoosh-object-data="NHKWORLD_News" banana-tap="1">
+                            <p class="textSize4 textWeightMid">NHK World News (Japan)</p>
+                        </li>
+                        <li swoosh-object-data="The_Japan_News" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Japan News (The Yomiuri Shimbun, Japan)</p>
+                        </li>
+                        <li swoosh-object-data="JapanTimes" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Japan Times (Japan)</p>
+                        </li>
+                        <li swoosh-object-data="AJWasahi" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Asia and Japan Watch (The Asahi Shimbun, Japan)</p>
+                        </li>
+                        <li swoosh-object-data="kyodo_english" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Kyodo Agency (Japan)</p>
+                        </li>
+                        <li swoosh-object-data="XHNews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Xinhua News Agency (China)</p>
+                        </li>
+                        <li swoosh-object-data="Echinanews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">China News Service (China)</p>
+                        </li>
+                        <li swoosh-object-data="ftchina" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Financial Times China (China)</p>
+                        </li>
+                        <li swoosh-object-data="ReutersChina" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Reuters China (China)</p>
+                        </li>
+                        <li swoosh-object-data="ChinaRealTime" banana-tap="1">
+                            <p class="textSize4 textWeightMid">WSJ China Real Time (China)</p>
+                        </li>
+                        <li swoosh-object-data="SCMP_News" banana-tap="1">
+                            <p class="textSize4 textWeightMid">South China Morning Post (China)</p>
+                        </li>
+                        <li swoosh-object-data="CDT" banana-tap="1">
+                            <p class="textSize4 textWeightMid">China Digital Times (China)</p>
+                        </li>
+                        <li swoosh-object-data="cctv_world" banana-tap="1">
+                            <p class="textSize4 textWeightMid">CCTV World (China)</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">World/Europe: UK</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="Telegraph" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Telegraph</p>
+                        </li>
+                        <li swoosh-object-data="MailOnline" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Mail Online</p>
+                        </li>
+                        <li swoosh-object-data="Independent" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Independent</p>
+                        </li>
+                        <li swoosh-object-data="SkyNews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">Sky News</p>
+                        </li>
+                        <li swoosh-object-data="itvnews" banana-tap="1">
+                            <p class="textSize4 textWeightMid">itv news</p>
+                        </li>
+                        <li swoosh-object-data="guardian" banana-tap="1">
+                            <p class="textSize4 textWeightMid">The Guardian</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="source-group" swoosh-current="opened">
+                    <div class="sourcegroup-title">
+                        <p class="textSize4 textWeightMid">World/Europe: France</p>
+                        <div class="sourcegroup-action-toggle" banana-tap="1">
+                            <div class="actionicon"><div class="obj"></div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li swoosh-object-data="France24_en" banana-tap="1">
+                            <p class="textSize4 textWeightMid">France 24 English</p>
+                        </li>
+                        <li swoosh-object-data="AFP" banana-tap="1">
+                            <p class="textSize4 textWeightMid">AFP</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-comparePresetManage-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="view-minipopover-container">
+            <div class="head-bar">
+                <div class="head-control">
+                    <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                        <div class="actionicon"><div class="obj"></div></div>
+                    </div>
+                </div>
+                <div class="comparePresetManage-presetinfo" swoosh-object-id="">
+                    <p class="textSize4 textWeightBold">Compare preset:</p>
+                    <p class="textSize4 textWeightMid presetTitle"></p>
+                </div>
+
+                <div class="comparePresetManage-action-delete" banana-tap="1">
+                    <div class="actionicon"><div class="obj"></div></div>
+                    <p class="textSize4 textWeightMid">DELETE</p>
+                </div>
+            </div>
+
+            <div class="comparePresetManage-viewArea popoverViewAreaObj">
+                <div class="comparePresetManage-includedsources">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-addBriefingTag-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="head-action-confirm" banana-tap="1" banana-status="1" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">DONE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold addBriefingTagTitleStatus">Add a new briefing</p>
+            </div>
+        </div>
+
+        <div class="addTag-viewArea popoverViewAreaObj">
+            <div class="addTag-guide">
+                <p class="textSize4 textWeightMid addTagGuide">Add any keywords for your daily briefing.</p>
+            </div>
+
+            <div class="addTag-notice">
+                <p class="textSize3 textWeightMid addTagGuide2">Note: you can only use characters, numbers, @, and dash</p>
+            </div>
+
+            <div class="addTag-form">
+                <input type="text" name="addNewBriefingTagField" id="addNewBriefingTagField" size="14" placeholder="new briefing tag" class="textSize17 textWeightMid" />
+            </div>
+
+            <div class="addTag-suggestions">
+                <p class="textSize4 textWeightBold">Trending tags</p>
+                <p class="textSize4 textWeightMid">Tap to add right away</p>
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-configBriefingTime-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="head-action-confirm" banana-tap="1" banana-status="0" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">SAVE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold configBriefingTimeTitleStatus">Customize your</p>
+                <p class="textSize9 textWeightBold">daily briefing alert</p>
+            </div>
+        </div>
+
+        <div class="configBriefingTime-viewArea popoverViewAreaObj">
+            <div class="configBriefingTime-hourConfig" banana-status="1">
+                <p class="textSize4 textWeightMid">Pick the time you want:</p>
+                <ul>
+                    <li swoosh-object-data="07">
+                        <p class="textSize8 textWeightMid configOptionContainer">7AM</p>
+                    </li>
+                    <li swoosh-object-data="08">
+                        <p class="textSize8 textWeightMid configOptionContainer">8AM</p>
+                    </li>
+                    <li swoosh-object-data="09">
+                        <p class="textSize8 textWeightMid configOptionContainer">9AM</p>
+                    </li>
+                    <li swoosh-object-data="10">
+                        <p class="textSize8 textWeightMid configOptionContainer">10AM</p>
+                    </li>
+                    <li swoosh-object-data="18">
+                        <p class="textSize8 textWeightMid configOptionContainer">6PM</p>
+                    </li>
+                    <li swoosh-object-data="19">
+                        <p class="textSize8 textWeightMid configOptionContainer">7PM</p>
+                    </li>
+                    <li swoosh-object-data="20">
+                        <p class="textSize8 textWeightMid configOptionContainer">8PM</p>
+                    </li>
+                    <li swoosh-object-data="21">
+                        <p class="textSize8 textWeightMid configOptionContainer">9PM</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="configBriefingTime-timezoneConfig">
+                <p class="textSize4 textWeightMid">Pick the right timezone for you:</p>
+                <ul>
+                    <li swoosh-object-data="PST">
+                        <p class="textSize8 textWeightMid configOptionContainer">PST</p>
+                    </li>
+                    <li swoosh-object-data="MST">
+                        <p class="textSize8 textWeightMid configOptionContainer">MST</p>
+                    </li>
+                    <li swoosh-object-data="CST">
+                        <p class="textSize8 textWeightMid configOptionContainer">CST</p>
+                    </li>
+                    <li swoosh-object-data="EST">
+                        <p class="textSize8 textWeightMid configOptionContainer">EST</p>
+                    </li>
+                    <li swoosh-object-data="AKST">
+                        <p class="textSize8 textWeightMid configOptionContainer">Alaska</p>
+                    </li>
+                    <li swoosh-object-data="HAST">
+                        <p class="textSize8 textWeightMid configOptionContainer">Hawaii</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-configBfPreferenceSocPol-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="head-action-confirm" banana-tap="1" banana-status="0" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">OKAY</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold configBriefingTimeTitleStatus">Setup your</p>
+                <p class="textSize9 textWeightBold">daily briefing preference</p>
+            </div>
+        </div>
+
+        <div class="configBfPreference-viewArea popoverViewAreaObj" swoosh-current="first">
+            <p class="textSize4 textWeightMid">Your selection will change daily briefings we make for you. You will be getting more news articles that match with your preference.</p>
+            <div class="configBfPreference-first" banana-status="1">
+                <p class="textSize4 textWeightBold">Pick your newspaper preference</p>
+                <ul>
+                    <li swoosh-object-data="neutral">
+                        <p class="textSize6 textWeightMid configOptionContainer">Unbiased/Neutral</p>
+                    </li>
+                    <li swoosh-object-data="left">
+                        <p class="textSize6 textWeightMid configOptionContainer">Liberal/Left-biased</p>
+                    </li>
+                    <li swoosh-object-data="right">
+                        <p class="textSize6 textWeightMid configOptionContainer">Conservative/Right-biased</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="configBfPreference-two" banana-status="0">
+                <p class="textSize4 textWeightBold">Which one do you prefer? (1/2)</p>
+                <ul>
+                    <li swoosh-object-data="cnn">
+                        <p class="textSize6 textWeightMid configOptionContainer">CNN</p>
+                    </li>
+                    <li swoosh-object-data="foxnews">
+                        <p class="textSize6 textWeightMid configOptionContainer">Fox News</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="configBfPreference-three" banana-status="0">
+                <p class="textSize4 textWeightBold">Which one do you prefer? (2/2)</p>
+                <ul>
+                    <li swoosh-object-data="nyt">
+                        <p class="textSize6 textWeightMid configOptionContainer">New York Times</p>
+                    </li>
+                    <li swoosh-object-data="wsj">
+                        <p class="textSize6 textWeightMid configOptionContainer">Wall Street Journal</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="configBfPreference-final" banana-status="0">
+                <p class="textSize6 textWeightMid">Great, your briefing preference is now set!</p>
+                <p class="textSize6 textWeightMid configBfPreferenceFinalText"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="swoosh-intro-view" banana-status="0">
+        <div class="intro-news" banana-status="1">
+            <div class="news-animation">
+                <div class="news n1">
+                    <p class="textSize14 textWeightBold">Nixon and Kennedy Clash in the First TV Debate</p>
+                </div>
+                <div class="news n2">
+                    <p class="textSize14 textWeightBold">Nixon Resigns, Ford Taking Over</p>
+                </div>
+                <div class="news n3">
+                    <p class="textSize14 textWeightBold">O.J. Simpson Not Guity - He is Freed After 15 Months in Jail</p>
+                </div>
+                <div class="news n4">
+                    <p class="textSize14 textWeightBold">U.S. ATTACKS IRAQ, BOMB BAGDAD AND KUWAITI TARGETS</p>
+                </div>
+                <div class="news n5">
+                    <p class="textSize14 textWeightBold">Catholic Church Allowed Abuse By Priest For Years</p>
+                </div>
+                <div class="news n6">
+                    <p class="textSize14 textWeightBold">PRESIDENT TRUMP - TRUMP TRIUMPHS, STUNNING CLINTON IN BATTLEGROUND STATES</p>
+                </div>
+                <div class="news n7">
+                    <p class="textSize14 textWeightBold">Trump calls out "dishonest media", The White House offers "alternative facts" on crowd size</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-jfk">
+            <p class="textSize8 textWeightMid">"There isn’t any doubt that we could not do the job at all in a free society without a very, very active press."<span class="jfkname"> - John F. Kennedy</span></p>
+        </div>
+
+        <div class="intro-main">
+            <div class="logo"></div>
+            <p class="textSize9 textWeightBold">Have your own newsroom.</p>
+            <p class="textSize9 textWeightBold">We prepare news for you.</p>
+            <div class="product-user-actions">
+                <div class="product-action" banana-tap="1">
+                    <p class="textSize6 textWeightBold">get started</p>
+                </div>
+                <div class="product-signin-action" banana-tap="1">
+                    <p class="textSize6 textWeightBold">sign in</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-signinAccount-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="head-action-confirm" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">SIGNIN</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold signinAccountTitleStatus">Welcome back to</p>
+                <p class="textSize9 textWeightBold">#Newsrooms</p>
+            </div>
+        </div>
+
+        <div class="signinAccount-viewArea popoverViewAreaObj">
+            <div class="signinAccount-form">
+                <div class="form-fields">
+                    <input type="email" autocorrect="off" autocapitalize="none" name="signinAccountEmailField" id="signinAccountEmailField" size="14" placeholder="your email" class="textSize12 textWeightMid" />
+                    <input type="password" name="signinAccountPassField" id="signinAccountPassField" size="14" placeholder="your password" class="textSize12 textWeightMid" />
+                </div>
+           </div>
+
+           <!--<div class="signinAccount-resetpass" banana-tap="1">
+                <p class="textSize5 textWeightBold">Forgot password</p>
+           </div>-->
+        </div>
+    </div>
+
+    <div id="swoosh-createAccount-view" banana-type="popover" banana-status="0" banana-option="base">
+        <div class="head-bar">
+            <div class="head-control">
+                <div class="head-action-close" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon"><div class="obj"></div></div>
+                </div>
+                <div class="head-action-confirm" banana-tap="1" banana-type="headControlButtons">
+                    <div class="actionicon">
+                        <div class="obj"></div>
+                        <p class="textSize4 textWeightMid">NEXT</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="head-title">
+                <p class="textSize9 textWeightBold createAccountTitleStatus">Hello!</p>
+                <p class="textSize9 textWeightBold">We're #Newsrooms</p>
+            </div>
+        </div>
+
+        <div class="createAccount-viewArea popoverViewAreaObj" swoosh-current="intro">
+            <div class="createAccount-form" banana-status="1">
+                <p class="textSize4 textWeightMid">Now, in order to receive daily briefings, you need to create an account.</p>
+                <div class="form-fields">
+                    <input type="email" autocorrect="off" autocapitalize="none" name="createAccountEmailField" id="createAccountEmailField" size="14" placeholder="your email" class="textSize6 textWeightMid" />
+                    <input type="password" name="createAccountPassField" id="createAccountPassField" size="14" placeholder="new password (6+)" class="textSize6 textWeightMid" />
+                    <input type="text" autocorrect="off" autocapitalize="none" name="createAccountUsernameField" id="createAccountUsernameField" size="14" placeholder="username (optional)" class="textSize6 textWeightMid" />
+                    <input type="text" autocorrect="off" autocapitalize="none" name="createAccountAgeField" id="createAccountAgeField" size="14" placeholder="age (optional)" class="textSize6 textWeightMid" />
+                    <div class="gender-selection" swoosh-object-data="none">
+                        <p class="textSize6 textWeightMid">gender (optional)</p>
+                        <div class="selection-options">
+                            <p class="textSize6 textWeightMid" swoosh-object-data="male" banana-tap="1">Male</p>
+                            <p class="textSize6 textWeightMid" swoosh-object-data="female" banana-tap="1">Female</p>
+                            <p class="textSize6 textWeightMid" swoosh-object-data="other" banana-tap="1">Other</p>
+                        </div>
+                    </div>
+                    <input type="text" autocorrect="off" autocapitalize="none" name="createAccountReferralField" id="createAccountReferralField" size="14" placeholder="referral code (optional)" class="textSize6 textWeightMid" />
+                </div>
+                <div class="tosnotice">
+                    <p class="textSize0 textWeightReg">By signing up, you agree to our <a href="https://inthenewsrooms.com/?tos">terms of use</a> and <a href="https://inthenewsrooms.com/?privacy">privacy policy</a>.</p>
+                </div>
+           </div>
+
+           <div class="createAccount-briefingtime" banana-status="0">
+                <p class="textSize4 textWeightMid">Almost done! Before we start, let’s customize your daily briefings.</p>
+                <div class="createAccount-hourConfig">
+                    <p class="textSize4 textWeightMid">Pick the time you want:</p>
+                    <ul>
+                        <li swoosh-object-data="07">
+                            <p class="textSize8 textWeightMid configOptionContainer">7AM</p>
+                        </li>
+                        <li swoosh-object-data="08">
+                            <p class="textSize8 textWeightMid configOptionContainer">8AM</p>
+                        </li>
+                        <li swoosh-object-data="09">
+                            <p class="textSize8 textWeightMid configOptionContainer">9AM</p>
+                        </li>
+                        <li swoosh-object-data="10">
+                            <p class="textSize8 textWeightMid configOptionContainer">10AM</p>
+                        </li>
+                        <li swoosh-object-data="18">
+                            <p class="textSize8 textWeightMid configOptionContainer">6PM</p>
+                        </li>
+                        <li swoosh-object-data="19">
+                            <p class="textSize8 textWeightMid configOptionContainer">7PM</p>
+                        </li>
+                        <li swoosh-object-data="20">
+                            <p class="textSize8 textWeightMid configOptionContainer">8PM</p>
+                        </li>
+                        <li swoosh-object-data="21">
+                            <p class="textSize8 textWeightMid configOptionContainer">9PM</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="createAccount-timezoneConfig">
+                    <p class="textSize4 textWeightMid">Pick the right timezone for you:</p>
+                    <ul>
+                        <li swoosh-object-data="PST">
+                            <p class="textSize8 textWeightMid configOptionContainer">PST</p>
+                        </li>
+                        <li swoosh-object-data="MST">
+                            <p class="textSize8 textWeightMid configOptionContainer">MST</p>
+                        </li>
+                        <li swoosh-object-data="CST">
+                            <p class="textSize8 textWeightMid configOptionContainer">CST</p>
+                        </li>
+                        <li swoosh-object-data="EST">
+                            <p class="textSize8 textWeightMid configOptionContainer">EST</p>
+                        </li>
+                        <li swoosh-object-data="AKST">
+                            <p class="textSize8 textWeightMid configOptionContainer">Alaska</p>
+                        </li>
+                        <li swoosh-object-data="HAST">
+                            <p class="textSize8 textWeightMid configOptionContainer">Hawaii</p>
+                        </li>
+                    </ul>
+                </div>
+           </div>
+
+           <div class="createAccount-configBfPreference" banana-status="0" swoosh-current="first">
+                <p class="textSize4 textWeightMid">Great, now you have to pick your briefing preference. Your selection will change daily briefings we make for you. You will be getting more news articles that match with your preference.</p>
+                <div class="configBfPreference-first" banana-status="1">
+                    <p class="textSize4 textWeightBold">Pick your newspaper preference</p>
+                    <ul>
+                        <li swoosh-object-data="neutral">
+                            <p class="textSize6 textWeightMid configOptionContainer">Unbiased/Neutral</p>
+                        </li>
+                        <li swoosh-object-data="left">
+                            <p class="textSize6 textWeightMid configOptionContainer">Liberal/Left-biased</p>
+                        </li>
+                        <li swoosh-object-data="right">
+                            <p class="textSize6 textWeightMid configOptionContainer">Conservative/Right-biased</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="configBfPreference-two" banana-status="0">
+                    <p class="textSize4 textWeightBold">Which one do you prefer? (1/2)</p>
+                    <ul>
+                        <li swoosh-object-data="cnn">
+                            <p class="textSize6 textWeightMid configOptionContainer">CNN</p>
+                        </li>
+                        <li swoosh-object-data="foxnews">
+                            <p class="textSize6 textWeightMid configOptionContainer">Fox News</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="configBfPreference-three" banana-status="0">
+                    <p class="textSize4 textWeightBold">Which one do you prefer? (2/2)</p>
+                    <ul>
+                        <li swoosh-object-data="nyt">
+                            <p class="textSize6 textWeightMid configOptionContainer">New York Times</p>
+                        </li>
+                        <li swoosh-object-data="wsj">
+                            <p class="textSize6 textWeightMid configOptionContainer">Wall Street Journal</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="configBfPreference-final" banana-status="0">
+                    <p class="textSize10 textWeightMid">Great, your briefing preference is now set!</p>
+                    <p class="textSize10 textWeightMid configBfPreferenceFinalText">Conservative Lv. 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-dimlayer-main" banana-status="0"></div>
+    <div id="swoosh-briefingload-indicator" banana-status="0">
+        <svg class="spinner" width="45px" height="45px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+    </div>
+    <div id="swoosh-network-indicator" banana-status="0">
+        <svg class="spinner" width="45px" height="45px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+    </div>
+
+    <div id="swoosh-actionsheet-view" swoosh-object-data="" banana-status="0">
+        <div class="actionsheet-container">
+            <p class="textSize5 textWeightMid actionsheet-info-text">Select action</p>
+            <div class="actionsheet-options">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="actionsheet-action-close" banana-tap="1">
+                <p class="textSize4 textWeightMid">Cancel</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="swoosh-popupsheet-view" swoosh-object-data="" banana-status="0">
+        <div class="popupsheet-container">
+            <p class="textSize5 textWeightMid popupsheet-info-text"></p>
+            <div class="popupsheet-options">
+                <div class="popupsheet-action-okay" banana-tap="1">
+                    <p class="textSize4 textWeightMid">Okay</p>
+                </div>
+                <div class="popupsheet-action-decline" banana-tap="1">
+                    <p class="textSize4 textWeightMid">Cancel</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-updatenotice-bar" banana-status="0" banana-option="base">
+        <div class="updatenotice-container">
+            <p class="textSize3 textWeightBold updateNoticeText"></p>
+        </div>
+    </div>
+
+    <div id="swoosh-ui-desktoptitlebar"></div>
+</body>
+</html>

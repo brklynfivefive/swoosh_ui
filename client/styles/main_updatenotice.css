@@ -1,0 +1,24 @@
+.main-updatenotice-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 17px;
+    background: rgba(255,255,255,.96);
+    margin: 0 auto;
+    transform: translate3d(0, -200px, 0);
+    z-index: 100;
+}
+
+.main-updatenotice-bar .updatenotice-container{
+    min-height: 42px;
+    padding-top: 20px;
+    color: #252525;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    display: flex;
+    align-items: center;
+}
+
+.main-updatenotice-bar .updatenotice-container p{
+    padding: 25px 17px 15px 2px;
+}

@@ -1,0 +1,53 @@
+#swoosh-actionsheet-view{
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+    transform: translate3d(0, 400px, 0);
+    opacity: 1;    
+}
+
+body[swoosh-screen-type="wide"] #swoosh-actionsheet-view{
+    margin: 0 10%;
+}
+
+#swoosh-actionsheet-view .actionsheet-container{
+    position: absolute;
+    width: calc(100% - 34px);
+    bottom: 0;
+    color: #252525;
+    background: #ffffff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    padding: 23px 17px 15px;
+}
+
+body[swoosh-screen-type="wide"] #swoosh-actionsheet-view .actionsheet-container{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.actionsheet-container .actionsheet-info-text{
+    margin-bottom: 15px;
+    color: #505050;
+}
+
+#swoosh-actionsheet-view .actionsheet-options{
+    text-transform: uppercase;
+}
+
+.actionsheet-options ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.actionsheet-options li{
+    padding: 13px 10px 13px 0;
+    text-transform: uppercase;
+}
+
+#swoosh-actionsheet-view .actionsheet-action-close{
+    padding: 13px 10px 13px 0;
+    text-transform: uppercase;
+}

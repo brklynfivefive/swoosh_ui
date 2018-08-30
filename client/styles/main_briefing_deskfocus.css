@@ -1,0 +1,342 @@
+
+/* desk briefings */
+
+.desk-briefings{
+    padding: 25px 0 0 0;
+    color: #252525;
+}
+
+body[swoosh-screen-type="wide"] .desk-briefings{
+    max-width: 50%;
+    min-width: 50%;
+    margin-right: 25px;
+}
+
+.desk-briefings[swoosh-current="opened"]{
+    border-bottom: 2px solid #dcdcdc;
+    padding-bottom: 25px;
+}
+
+body[swoosh-screen-type="wide"] .desk-briefings[swoosh-current="opened"]{
+    border-bottom: none;
+}
+
+.deskbriefingsIcon{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-bottom: 6px;
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+    background: #03A9F4;
+    -webkit-mask-image: url(../../resources/deskfocus.svg);
+    -webkit-mask-size: 23px 23px;
+}
+
+.deskthings-group{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.deskbriefings-notice{
+    display: flex;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    flex-direction: column;
+    align-self: baseline;
+}
+
+.deskthings-group .deskbriefings-action-toggle{
+    display: flex;
+    margin-top: -4px;
+}
+
+body[swoosh-screen-type="wide"] .deskthings-group .deskbriefings-action-toggle{
+    display: none;
+}
+
+.deskthings-group .deskbriefings-action-toggle .actionicon{
+    padding: 10px;
+}
+
+.deskthings-group .deskbriefings-action-toggle .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 19px;
+    height: 10px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/down.svg);
+    -webkit-mask-size: 19px 10px;
+}
+
+.desk-briefings[swoosh-current="opened"] .deskbriefings-action-toggle .obj{
+    -webkit-mask-image: url(../../resources/up.svg);
+}
+
+.deskbriefingsUpdatedTs{
+    text-transform: uppercase;
+}
+
+.deskbriefings-alertoption{
+    margin-bottom: 15px;
+}
+
+.deskbriefings-alertoption li{
+    display: flex;
+    align-self: baseline;
+    padding: 5px 9px;
+    background: #fff;
+    border-radius: 20px;
+    color: #fff;
+    background: #fbbd01;
+    box-shadow: 0 0 2px rgba(0,0,0,.2);
+    text-transform: uppercase;
+}
+
+.deskbriefings-alertoption[swoosh-current="no"] li{
+    background: #838383;
+}
+
+.deskbriefings-type-selection{
+    position: relative;
+    color: #838383;
+    overflow: hidden;
+}
+
+.deskbriefings-type-selection:after{
+    content: '';
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 32px;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    position: absolute;
+}
+
+.deskbriefings-type-selection ul{
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.deskbriefings-type-selection li{
+    display: flex;
+    align-self: baseline;
+    margin-right: 12px;
+    padding: 6px 1px;
+}
+
+.deskbriefings-type-selection .type-selection[swoosh-object-data="usasociety"] li[swoosh-object-data="usasociety"]{
+    color: #03A9F4;
+    border-bottom: 2px solid;
+}
+
+.deskbriefings-type-selection .type-selection[swoosh-object-data="usapolitics"] li[swoosh-object-data="usapolitics"]{
+    color: #03A9F4;
+    border-bottom: 2px solid;
+}
+
+.deskbriefings-type-selection .type-selection[swoosh-object-data="usatechindustry"] li[swoosh-object-data="usatechindustry"]{
+    color: #03A9F4;
+    border-bottom: 2px solid;
+}
+
+.deskbriefings-type-selection .type-selection[swoosh-object-data="usafinance"] li[swoosh-object-data="usafinance"]{
+    color: #03A9F4;
+    border-bottom: 2px solid;
+}
+
+.deskbriefings-type-selection .type-selection[swoosh-object-data="usabusiness"] li[swoosh-object-data="usabusiness"]{
+    color: #03A9F4;
+    border-bottom: 2px solid;
+}
+
+.deskbriefings-type-selection .type-selection[swoosh-object-data="usasports"] li[swoosh-object-data="usasports"]{
+    color: #03A9F4;
+    border-bottom: 2px solid;
+}
+
+.deskbriefings-type-selection .type-selection[swoosh-object-data="western-en-world"] li[swoosh-object-data="western-en-world"]{
+    color: #03A9F4;
+    border-bottom: 2px solid;
+}
+
+.deskbriefings-type-selection .type-selection[swoosh-object-data="western-en-gaming"] li[swoosh-object-data="western-en-gaming"]{
+    color: #03A9F4;
+    border-bottom: 2px solid;
+}
+
+.desk-briefings .deskbriefings-group{
+    margin-top: 25px;
+    transition: all 400ms ease;
+}
+
+.desk-briefings[swoosh-current="folded"] .deskbriefings-group, .desk-briefings[swoosh-current="folded"] .deskbriefings-type-selection, .desk-briefings[swoosh-current="folded"] .deskbriefings-none{
+    display: none;
+}
+
+body[swoosh-screen-type="wide"] .desk-briefings .deskbriefings-group{
+    padding-bottom: 80px;
+}
+
+.desk-briefings .deskbriefings-group > div > p{
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.desk-briefings .deskbriefings-group ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.desk-briefings .deskbriefings-none{
+    color: #505050;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.deskbriefings-none p:nth-child(2){
+    margin-top: 4px;
+}
+
+.deskbriefings-group[swoosh-current="dim"]{
+    opacity: 0.2;
+}
+
+.desk-briefings .deskbriefings-group .top li{
+    margin-bottom: 16px;
+    width: 100%;
+    background: #f7f7f7;
+    padding: 19px 17px;
+    border-radius: 10px;
+    transform: translateZ(0);
+}
+
+.desk-briefings .deskbriefings-group li > div{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.desk-briefings .deskbriefings-group .deskfocus-item{
+    position: relative;
+    width: 100%;
+}
+
+.desk-briefings .deskbriefings-group li .tagContainer{
+    display: flex;
+    padding: 9px 11px;
+    color: #252525;
+    border-radius: 10px;
+    background: #eaeaea;
+    align-items: center;
+}
+
+.desk-briefings .deskbriefings-group li .tagContainer.tagWithPhoto{
+    background: none;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.desk-briefings .deskfocus-topindicator{
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    color: #0084D6;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    flex-shrink: 0;
+    align-items: center;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+
+.desk-briefings .deskfocus-item .item-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateZ(0);
+}
+
+.desk-briefings .deskbriefings-group li .deskfocusTag{
+    color: #03A9F4;
+}
+
+.desk-briefings .deskbriefings-group li .deskfocusTagSub{
+    color: #505050;
+    flex-shrink: 0;
+}
+
+.desk-briefings .deskfocus-item .storyObj{
+    display: flex;
+    position: relative;
+    margin-top: 13px;
+    transform: translateZ(0);
+}
+
+.desk-briefings .deskfocus-item .storyPhoto{
+    position: relative;
+    width: 100%;
+    transition: 300ms ease;
+    border-radius: 10px;
+}
+
+.desk-briefings .deskfocus-item .storyPhoto .obj{
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+}
+
+.desk-briefings .deskfocus-item .storyContent{
+    position: relative;
+    max-width: 100%;
+    min-width: 57%;
+    display: flex;
+    align-items: center;
+}
+
+.desk-briefings .deskfocus-item .storyObj[swoosh-object-data="photo"] .storyContent{
+    max-width: 57%;
+    min-width: 57%;
+    padding: 10px 13px 10px 0;
+}
+
+.desk-briefings .deskfocus-item .storyContent .storyHeadTitle{
+    margin-bottom: 4px;
+}
+
+.desk-briefings .deskfocus-item .storyContent .storySource{
+    margin-top: 3px;
+}
+
+.desk-briefings .deskfocus-item .contentContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+/* others */
+
+.desk-briefings .deskbriefings-group .others{
+    margin-top: 10px;
+}
+
+.desk-briefings .deskbriefings-group > div > p{
+    margin-bottom: 15px;
+    color: #505050;
+}
+
+.desk-briefings .deskbriefings-group .others li{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

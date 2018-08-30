@@ -1,0 +1,18 @@
+{{#if array}}
+{{#array}}
+<li class="noticeitem" swoosh-object-link="{{url}}">
+    <p class="textSize6 textWeightMid">{{title}}</p>
+    {{#if ts}}
+    <p class="textSize3 textWeightMid noticeitemTs" swoosh-data="{{ts}}"></p>
+    {{/if}}
+    <div class="noticeitemContentText">
+        {{#each content}}
+            <p class="textSize3 textWeightReg2">{{this}}</p>
+        {{/each}}
+    </div>
+    {{#if url}}
+    <p class="textSize1 textWeightReg2 noticeurlGuide">tap to see more</p>
+    {{/if}}
+</li>
+{{/array}}
+{{/if}}

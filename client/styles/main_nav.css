@@ -1,0 +1,91 @@
+.main-navigation-bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 51px;
+    align-items: center;
+}
+
+.main-navigation-bar .navmenu-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    background: #FAFAFA;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+    height: 51px;
+}
+
+body[swoosh-screen-type="wide"] .main-navigation-bar .navmenu-container{
+    width: auto;
+    padding: 0 30%;
+}
+
+.navmenu-container .navitem{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 16px 20px;
+    height: 20px;
+    display: flex;
+}
+
+.navmenu-container .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #9e9e9e;
+    -webkit-mask-image: url(../../resources/home.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+.navmenu-container .navitem[swoosh-target="briefingHome"] .obj{
+    -webkit-mask-image: url(../../resources/home.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+.navmenu-container .navitem[swoosh-target="manageTags"] .obj{
+    -webkit-mask-image: url(../../resources/tag.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+.navmenu-container .navitem[swoosh-target="indepthStories"] .obj{
+    -webkit-mask-image: url(../../resources/discover.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+.navmenu-container .navitem[swoosh-target="readLater"] .obj{
+    -webkit-mask-image: url(../../resources/readlater.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+.navmenu-container .navitem[swoosh-target="settings"] .obj{
+    -webkit-mask-image: url(../../resources/settings.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+.main-navigation-bar[swoosh-current="briefingHome"] .navitem[swoosh-target="briefingHome"] .obj{
+    background: #2c2c2c;
+}
+
+.main-navigation-bar[swoosh-current="manageTags"] .navitem[swoosh-target="manageTags"] .obj{
+    background: #2c2c2c;
+}
+
+.main-navigation-bar[swoosh-current="indepthStories"] .navitem[swoosh-target="indepthStories"] .obj{
+    background: #2c2c2c;
+}
+
+.main-navigation-bar[swoosh-current="readLater"] .navitem[swoosh-target="readLater"] .obj{
+    background: #2c2c2c;
+}
+
+.main-navigation-bar[swoosh-current="settings"] .navitem[swoosh-target="settings"] .obj{
+    background: #2c2c2c;
+}

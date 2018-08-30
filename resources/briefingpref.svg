@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_appsettings</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="24-px-Icons" transform="translate(-170.000000, -123.000000)" stroke="#000000">
+            <g id="ic_appsettings" transform="translate(168.000000, 120.000000)">
+                <g id="app_settings">
+                    <g transform="translate(3.000000, 4.000000)">
+                        <path d="M9,0 L9,16" id="Line-Copy" stroke-width="2"></path>
+                        <path d="M16,0 L16,16" id="Line-Copy-2" stroke-width="2"></path>
+                        <path d="M2,0 L2,16" id="Line" stroke-width="2"></path>
+                        <circle id="Oval-4" fill="#000000" cx="2" cy="4" r="2"></circle>
+                        <circle id="Oval-4-Copy" fill="#000000" cx="16" cy="4" r="2"></circle>
+                        <circle id="Oval-4-Copy-2" fill="#000000" cx="9" cy="12" r="2"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

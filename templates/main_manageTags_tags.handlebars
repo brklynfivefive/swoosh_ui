@@ -1,0 +1,26 @@
+{{#if array}}
+{{#array}}
+{{#if storiescount}}
+<li swoosh-object-id="{{objectid}}" banana-tap="1">
+{{else}}
+<li swoosh-object-id="{{objectid}}" swoosh-object="nobriefing" banana-tap="1">
+{{/if}}
+    <div>
+        {{#if mainphoto}}
+        <p class="textSize6 textWeightMid tagContainer tagWithPhoto" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.2) 100%), url('{{mainphoto}}');">{{tag}}</p>
+        {{else}}
+        <p class="textSize6 textWeightMid tagContainer">{{tag}}</p>
+        {{/if}}
+        <p class="textSize6 textWeightBold tagContainerKeyStories">{{focusstoriesCount}}</p>
+    </div>
+    <div class="tag-actions">
+        <div class="tag-action-edit" banana-tap="1" banana-status="1">
+            <div class="actionicon"><div class="obj"></div></div>
+        </div>
+        <div class="tag-action-delete" banana-tap="1" banana-status="1">
+            <div class="actionicon"><div class="obj"></div></div>
+        </div>
+    </div>
+</li>
+{{/array}}
+{{/if}}

@@ -1,0 +1,73 @@
+#swoosh-marketingpromotion-view{
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: #fff;
+	transform: translate3d(0, 100%, 0);
+    overflow: hidden;
+}
+
+#swoosh-marketingpromotion-view .head-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 17px 18px;
+}
+
+#swoosh-marketingpromotion-view .head-title{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: #252525;
+    padding: 0 17px 20px 17px;
+    text-transform: uppercase;
+}
+
+#swoosh-marketingpromotion-view .head-control > div{
+    display: flex;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+#swoosh-marketingpromotion-view .head-control .actionicon{
+    padding: 10px;
+}
+
+#swoosh-marketingpromotion-view .head-action-close .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/close.svg);
+    -webkit-mask-size: 17px 17px;
+}
+
+#swoosh-marketingpromotion-view .marketingpromotion-viewArea{
+    position: absolute;
+    height: calc(100% - 123px);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.marketingpromotion-viewArea .promotion-image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('https://inthenewsrooms.com/resources/promotion/0417_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+}

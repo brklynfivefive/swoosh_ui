@@ -1,0 +1,254 @@
+#swoosh-createAccount-view{
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: #fff;
+	transform: translate3d(0, 100%, 0);
+}
+
+#swoosh-createAccount-view .head-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #252525;
+    padding: 35px 17px 18px;
+}
+
+#swoosh-createAccount-view .head-title{
+    display: flex;
+    flex-direction: column;
+    padding: 0 17px 20px 17px;
+    color: #252525;
+    text-transform: uppercase;
+}
+
+#swoosh-createAccount-view .head-control > div{
+    display: flex;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+#swoosh-createAccount-view .head-control > div.head-action-confirm{
+    margin-left: 0;
+    margin-right: -10px;
+    height: 37px;
+}
+
+#swoosh-createAccount-view .head-action-close[swoosh-current="blocked"]{
+    opacity: 0.3;
+}
+
+#swoosh-createAccount-view .head-control .actionicon{
+    padding: 10px;
+}
+
+#swoosh-createAccount-view .head-action-confirm .actionicon{
+    display: flex;
+    color: #252525;
+    line-height: 20px;
+}
+
+#swoosh-createAccount-view .head-action-close .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/close.svg);
+    -webkit-mask-size: 17px 17px;
+}
+
+#swoosh-createAccount-view .head-action-confirm .obj{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-right: 7px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #252525;
+    -webkit-mask-image: url(../../resources/confirm.svg);
+    -webkit-mask-size: 20px 20px;
+}
+
+#swoosh-createAccount-view .createAccount-viewArea{
+    position: absolute;
+    height: calc(100% - 164px);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 0 17px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+#swoosh-createAccount-view > div{
+    color: #333;
+}
+
+.createAccount-intro .intro-briefingsample{
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 2px solid #efefef;
+}
+
+#swoosh-createAccount-view .bfP-focus{
+	height: 450px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    transform: translateZ(0);
+}
+
+#swoosh-createAccount-view .bfP-focus .view-bar{
+    padding: 0 17px 18px;
+    margin-top: 5px;
+}
+
+#swoosh-createAccount-view .bfP-focus .focus-story{
+	height: 100%;
+}
+
+.createAccount-form .form-fields{
+    margin-top: 15px;
+}
+
+.createAccount-form input{
+    background: transparent;
+	border: none;
+	resize: none;
+    width: 100%;
+	-webkit-font-smoothing: antialiased;
+	outline: none;
+    padding: 7px 0;
+    margin-bottom: 4px;
+    color: #252525;
+}
+
+.createAccount-form .gender-selection{
+    margin-top: 7px;
+    color: #505050;
+}
+
+.createAccount-form .gender-selection .selection-options{
+    display: flex;
+}
+
+.createAccount-form .gender-selection .selection-options p{
+    margin-right: 15px;
+    padding: 10px 0 13px 0;
+    color: #252525;
+}
+
+.createAccount-form .gender-selection[swoosh-object-data="male"] .selection-options p[swoosh-object-data="male"]{
+    color: #03A9F4;
+}
+
+.createAccount-form .gender-selection[swoosh-object-data="female"] .selection-options p[swoosh-object-data="female"]{
+    color: #03A9F4;
+}
+
+.createAccount-form .gender-selection[swoosh-object-data="other"] .selection-options p[swoosh-object-data="other"]{
+    color: #03A9F4;
+}
+
+.createAccount-form .tosnotice{
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.createAccount-hourConfig{
+    color: #252525;
+}
+
+.createAccount-timezoneConfig{
+    margin-top: 20px;
+    color: #252525;
+}
+
+.createAccount-briefingtime li{
+    margin-bottom: 12px;
+    margin-right: 7px;
+    display: inline-block;
+}
+
+.createAccount-briefingtime ul{
+    margin-top: 10px;
+}
+
+.createAccount-briefingtime li .configOptionContainer{
+    background: #03a9f4;
+    text-transform: capitalize;
+    padding: 9px 11px;
+    color: #fff;
+    display: table;
+}
+
+.createAccount-briefingtime li[swoosh-current="selected"] .configOptionContainer{
+    box-shadow: inset 0 0 0px 3px #0288d1;
+}
+
+
+#swoosh-createAccount-view .createAccount-configBfPreference{
+    position: absolute;
+    height: calc(100% - 164px);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 0 17px;
+    color: #252525;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.createAccount-configBfPreference > div{
+    margin-top: 30px;
+    color: #252525;
+}
+
+.createAccount-configBfPreference > div > p{
+    text-transform: uppercase;
+}
+
+.createAccount-configBfPreference li{
+    margin-bottom: 13px;
+}
+
+.createAccount-configBfPreference ul{
+    margin-top: 20px;
+}
+
+.createAccount-configBfPreference li .configOptionContainer{
+    background: #eaeaea;
+    text-transform: capitalize;
+    padding: 9px 11px;
+    color: #252525;
+    display: table;
+}
+
+.createAccount-configBfPreference li[swoosh-current="selected"] .configOptionContainer{
+    box-shadow: inset 0 0 0px 3px #505050;
+}
+
+.createAccount-configBfPreference .configBfPreferenceFinalText{
+    background: #252525;
+    text-transform: capitalize;
+    padding: 9px 11px;
+    color: #fff;
+    display: table;
+    margin-top: 20px;
+}

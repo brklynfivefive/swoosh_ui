@@ -1,0 +1,63 @@
+<div class="today-top"></div>
+{{#array}}
+{{#if focusstories}}
+{{#each focusstories}}
+{{#if url}}
+<div class="today-story" swoosh-object-id="{{tweet_id}}" swoosh-current="hidden" swoosh-object-type="briefingstory" swoosh-object-link="{{url}}" banana-status="1">
+{{else}}
+<div class="today-story" swoosh-object-id="{{tweet_id}}" swoosh-current="hidden" swoosh-object-type="briefingstory" swoosh-object-link="none" banana-status="1">
+{{/if}}
+    {{#if original_image}}
+    <div class="story-photo">
+        <div class="obj" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.1) 90%), url('{{original_image}}');"></div>
+    </div>
+    <div class="story-head" swoosh-object-type="photo">
+        {{#if titleonly}}
+        <p class="textSize7 textWeightBold storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+        <p class="textSize2 textWeightReg2 storyHeadTitle" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+        {{else}}
+        <p class="textSize7 textWeightBold storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+        {{/if}}
+    {{else}}
+    {{#if photo}}
+    <div class="story-photo">
+        <div class="obj" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.1) 90%), url('{{photo}}');"></div>
+    </div>
+    <div class="story-head" swoosh-object-type="photo">
+        {{#if titleonly}}
+        <p class="textSize7 textWeightBold storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+        <p class="textSize2 textWeightReg2 storyHeadTitle" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+        {{else}}
+        <p class="textSize7 textWeightBold storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+        {{/if}}
+    {{else}}
+    <div class="story-head">
+        {{#if titleonly}}
+        <p class="textSize9 textWeightBold storyHeadTitle" swoosh-object-origin="{{target}}">{{titleonly}}</p>
+        <p class="textSize2 textWeightReg2 storyHeadTitle" swoosh-object-origin="{{target}}">{{descriptionfocus}}</p>
+        {{else}}
+        <p class="textSize9 textWeightBold storyHeadTitle" swoosh-object-origin="{{target}}">{{title}}</p>
+        {{/if}}
+    {{/if}}
+    {{/if}}
+        
+        <div class="story-source">
+            <p class="textSize1 textWeightBold">About {{../tag}} from {{target}}</p>
+            <p class="textSize1 textWeightMid focusStoryTs" swoosh-data="{{ts}}"></p>
+        </div>
+        <div class="story-action-share">
+            <div class="actionicon"><div class="obj"></div></div>
+        </div>
+    </div>
+</div>
+{{/each}}
+</div>
+{{/if}}
+{{/array}}
+<div class="today-end" banana-tap="1">
+    <p class="textSize4 textWeightBold">That's all!</p>
+    <p class="textSize4 textWeightBold">You can always read all key stories in your briefing inbox</p>
+    <div class="today-action-jumpinbox" banana-tap="1">
+        <div class="actionicon"><div class="obj"></div></div>
+    </div>
+</div>

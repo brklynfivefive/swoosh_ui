@@ -1,0 +1,361 @@
+/*!
+ * (c) Toast Labs, LLC. All rights reserved.
+ *
+ * built by Todd
+ */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+ol,ul,li{list-style:none;}
+a{text-decoration:none;}
+img{border:none;}
+h1,h2,h3,h4,h5,h6{
+    font-weight:inherit;
+    font-family:inherit;
+}
+.clear{clear:both;}
+
+html{
+    user-select: none !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateZ(0);
+}
+
+header{
+    user-select: none !important;
+}
+
+::scrollbar-thumb {
+    display: none;
+}
+
+body{
+	font-family: HelveticaNeue, Arial Bold, sans-serif;
+	font-weight: normal;
+	font-size: 1.0em;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+	margin: 0 auto;
+    background: #fff;
+	-webkit-user-select: none !important;
+    -webkit-user-callout: none !important;
+    -webkit-touch-callout: none !important;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    transition: all 300ms ease;
+	backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius:0;
+    border-radius:0;
+}
+
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hideTxt{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../../resources/fonts/Roboto-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../../resources/fonts/Roboto-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../../resources/fonts/Roboto-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('../../resources/fonts/Roboto-Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+.textWeightReg{
+    font-family: -apple-system, BlinkMacSystemFont, AvenirNext-Regular, HelveticaNeue, Arial;
+    letter-spacing: -0.4px;
+    font-weight: 300;
+}
+
+.textWeightReg2{
+    font-family: -apple-system, BlinkMacSystemFont, AvenirNext-Medium, HelveticaNeue, Arial;
+    letter-spacing: -0.4px;
+    font-weight: 400;
+}
+
+.textWeightMid{
+    font-family: -apple-system, BlinkMacSystemFont, AvenirNext-Demibold, HelveticaNeue, Arial;
+    letter-spacing: -0.4px;
+    font-weight: 600;
+}
+
+.textWeightBold{
+    font-family: -apple-system, BlinkMacSystemFont, AvenirNext-Bold, HelveticaNeue-Bold, Arial;
+    letter-spacing: -0.4px;
+    font-weight: 800;
+}
+
+body[swoosh-device-type="android"] .textWeightReg{
+    font-family: 'Roboto-Regular', BlinkMacSystemFont, AvenirNext-Regular, HelveticaNeue, Arial;
+    letter-spacing: 0px;
+    font-weight: initial;
+}
+
+body[swoosh-device-type="android"] .textWeightReg2{
+    font-family: 'Roboto-Medium', BlinkMacSystemFont, AvenirNext-Medium, HelveticaNeue, Arial;
+    letter-spacing: 0px;
+    font-weight: initial;
+}
+
+body[swoosh-device-type="android"] .textWeightMid{
+    font-family: 'Roboto-Bold', BlinkMacSystemFont, AvenirNext-Demibold, HelveticaNeue, Arial;
+    letter-spacing: 0px;
+    font-weight: initial;
+}
+
+body[swoosh-device-type="android"] .textWeightBold{
+    font-family: 'Roboto-Black', BlinkMacSystemFont, AvenirNext-Bold, HelveticaNeue-Bold, Arial;
+    letter-spacing: 0px;
+    font-weight: initial;
+}
+
+.textSize22{font-size:1.85em;}
+.textSize18{font-size:1.7em;}
+.textSize17{font-size:1.65em;}
+.textSize16{font-size:1.6em;}
+.textSize15{font-size:1.55em;}
+.textSize14{font-size:1.5em;}
+.textSize13{font-size:1.44em;}
+.textSize12{font-size:1.4em;}
+.textSize11{font-size:1.35em;}
+
+.textSize10{font-size:1.3em;}
+.textSize9{font-size:1.20em;}
+.textSize8{font-size:1.18em;}
+.textSize7{font-size:1.12em;}
+.textSize6{font-size:1.09em;} 
+.textSize5{font-size:1.05em;} 
+.textSize4{font-size:1.01em;}
+.textSize3{font-size:0.96em;}
+.textSize2{font-size:0.89em;}
+.textSize1{font-size:0.83em;}
+.textSize0{font-size:0.8em;}
+.textSize01{font-size:0.7em;}
+
+::scrollbar { 
+    display: none; 
+}
+
+.helperImg{
+    display: none !important;
+    opacity: 0;
+}
+
+.txcBlue{color: #00c1ff;}
+.txcB{color: #4f4f4f;}
+.txcMidGray{color: #747474;}
+.txcBrtGray{color: #B0B0B0;}
+.txcW{color: rgba(255, 255, 255, 1);}
+.txcVariableW{color: rgba(255, 255, 255, 0.75) !important;}
+
+::input-placeholder{
+    opacity: 0.7;
+    color: #3b3b3b;
+}
+
+.subTitleText{
+    line-height: 23px;
+}
+
+a{
+    color: #B0B0B0;
+}
+
+@keyframes obj-Popout{
+    0%{transform:scale3d(0, 0 , 3);}
+    20%{transform:scale3d(1.0, 1.0, 3);}
+    40%{transform:scale3d(1.07, 1.07, 3);}
+    70%{transform:scale3d(0.98, 0.98, 3);}
+    100%{transform:scale3d(1, 1, 3);}
+}
+
+.objPopout{
+    animation: obj-Popout 500ms ease;
+    opacity: 1 !important;
+    backface-visibility: hidden;
+}
+
+@keyframes obj-PrePopout{
+    0%{transform:scale3d(0.98, 0.98, 3);}
+    20%{transform:scale3d(1.0, 1.0, 3);}
+    40%{transform:scale3d(1.01, 1.01, 3);}
+    70%{transform:scale3d(0.99, 0.99, 3);}
+    100%{transform:scale3d(1, 1, 3);}
+}
+
+.objPrePopout{
+    animation: obj-PrePopout 500ms ease;
+    opacity: 1 !important;
+    backface-visibility: hidden;
+}
+
+@keyframes obj-Popin{
+    0%{transform:scale3d(1.0, 1.0, 3);}
+    20%{transform:scale3d(1.05, 1.05, 3);opacity: 0.3;}
+    40%{transform:scale3d(1.0, 1.0, 3);opacity: 0.1;}
+    70%{transform:scale3d(0.95, 0.95, 3);opacity: 0;}
+    100%{transform:scale3d(0.85, 0.85, 3);opacity: 0;}
+}
+
+.objPopin{
+    animation: obj-Popin 500ms ease;
+}
+
+@keyframes obj-Flickering{
+    20%{transform:scale3d(0.97, 0.97, 3);opacity: 0.85;}
+    40%{transform:scale3d(0.96, 0.96, 3);opacity: 0.75;}
+    60%{transform:scale3d(0.97, 0.97, 3);opacity: 0.85;}
+    80%{transform:scale3d(1.01, 1.01, 3);opacity: 0.95;}
+    100%{transform:scale3d(1.00, 1.0, 3);opacity: 1;}
+}
+
+.objFlickering{
+    animation: obj-Flickering 1500ms infinite;
+}
+
+@keyframes obj-Shake{
+	0%{transform: translate3d(0, 0, 0);}
+    10%, 30%, 50%, 70%, 90%{transform: translate3d(0, -3px, 0);}
+    20%, 40%, 60%, 80% {transform: translate3d(0, 3px, 0);}
+    100%{transform: translate3d(0, 0, 0);}
+}
+
+.objShake{
+    animation: obj-Shake 400ms ease;
+    transform-origin: 50% 50%;
+}
+
+@keyframes obj-Bounce{
+    0%{transform: translate3d(0, 0, 0);}
+    20%{transform: translate3d(0, -7px, 0);}
+    40%{transform: translate3d(0, -4px, 0);}
+    60%{transform: translate3d(0, 0px, 0);}
+    80%{transform: translate3d(0, 3px, 0);}
+    100%{transform: translate3d(0, 0, 0);}
+}
+
+.objBounce{
+    animation: obj-Bounce 300ms cubic-bezier(0.3,1.0, 0.6, 1.0);
+    transform-origin: 50% 50%;
+}
+
+#swoosh-ui-desktoptitlebar{
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    background: transparent;
+    -webkit-app-region: drag;
+}
+
+#swoosh-main-view .mainViewObj.dimmode{
+    opacity: 0.2;
+}
+
+#swoosh-dimlayer-main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 200ms ease;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#swoosh-briefingload-indicator, #swoosh-network-indicator{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#swoosh-briefingload-indicator .spinner, #swoosh-network-indicator .spinner{
+    display: flex;
+    margin: 0 auto;
+    animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+#swoosh-briefingload-indicator .path, #swoosh-network-indicator .path{
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    stroke: #252525;
+    animation: dash 1.4s ease-in-out infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 187;
+    }
+    50% {
+        stroke-dashoffset: 46.75;
+        transform: rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: 187;
+        transform: rotate(450deg);
+    }
+}
+
+*[banana-option="baseresize"], *[banana-option="base"]{
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+*[banana-status="0"]{
+    display: none !important;
+    visibility: hidden;
+}
+
+*[banana-status="1"]{
+    opacity: 1;
+}
+
+*[banana-tap="1"].tapped{
+    opacity: 0.7 !important;
+}
