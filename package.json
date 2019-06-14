@@ -6,7 +6,7 @@
     "babelify": "^7.3.0",
     "browserify-shim": "^3.8.12",
     "handlebars": "^4.0.0",
-    "jquery": "^2.2.3",
+    "jquery": "^3.4.0",
     "jquery-easing": "0.0.1",
     "jquery.scrollto": "^2.1.2",
     "jsjws": "^2.1.0",
